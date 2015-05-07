@@ -1,0 +1,2599 @@
+"Afternoon Tea" by "C.Y. Tan"
+
+The story genre is "Crime Mystery Sci-fi Western Space Thriller Tragicomedy". 
+
+The story creation year is 2015.
+
+The story description is "For some, tea is an afternoon's respite. For others, a cup of warmth on wintry mornings. Tea can become precious, special moments. Yet, tea itself isn't special. It's the feelings found in its quiet reflection that are. "
+
+Release along with a website and the source text.
+Release along with the "Quixe" interpreter.
+
+Use American dialect.
+Use the serial comma.
+
+Part - Mechanics
+
+Chapter - Extensions
+
+Include Basic Screen Effects by Emily Short.
+Include Glulx Text Effects by Emily Short.
+Include Reactable Quips by Michael Martin.
+Include Quip-Based Conversation by Michael Martin.
+Include Postures by Emily Short.
+
+Chapter - Characters
+
+A recurring character is a kind of person. A recurring character has a number called an interaction level. The interaction level of a recurring character is usually 0.
+
+Section - Ruth
+
+The player is a woman called Ruth. 
+Ruth can be unwell or well.  Ruth is unwell.
+Ruth can be undecided or decided. Ruth is undecided.
+Ruth can be laying down. Ruth is laying down.
+Ruth can be mirror-weary. 
+Ruth can be aware of Richmund's name.
+Ruth can be in little girl form, teenage girl form, or adult girl form.
+Ruth can be in a cold situation.
+Ruth can be aware of new doors. Ruth is not aware of new doors.
+Ruth can be done with chapter 4.
+Ruth can be aware of Sarah's apartment.
+Ruth can be done with chapter 5.
+
+Section -Richmund
+
+Richmund is a recurring character . Richmund can be examined. Richmund is male. Understand "him" or "Richmund" or "Rich" as Richmund.
+
+Section - Ada
+
+Ada is a woman. The description of Ada is "Mommy's really pretty.".
+
+Section - Sarah
+
+Sarah is a woman. Understand "her" or "Sarah" as Sarah.
+
+Chapter - Actions
+
+Understand the command "get" as something new.
+Understand "get up" or "get off" as standing up.
+Understand "get on [something]" or "get on" as sitting on.
+Understand "get in [something]" or "get in" as lying on.
+Understand "get out", "leave", or "back" as exiting.
+Understand "get [something]" as taking.
+Understand "look around", "walk around", or "review the room" as looking.
+
+[Every turn:
+	say "[the current action]".]
+	
+Instead of waiting:
+	say "You really can't be wasting time now.".
+	
+Printing help is an action applying to nothing. Understand "help", "help me", or "I need help" as printing help.
+
+Carry out printing help:
+	say "Also using the 'look' and 'look around' commands might be a good idea."
+
+Section -  Directions
+
+Is northing is a truth state that varies. Is northing is false.
+Going forward is an action applying to nothing. Understand "forward", "forwards", "go forwards", "go forward", "f", "ahead", or "go in front" as going forward.
+Carry out going forward:
+	now is northing is true;
+	try going north. 
+
+Before going north:
+	if is northing is false:
+		say "You try your best to interpret the earth's magnetic waves. But you just can't seem to figure them out. You go forwards instead.";
+	otherwise:
+		now is northing is false;
+		
+Is southing is a truth state that varies. Is southing is false.
+Going backward is an action applying to nothing. Understand "backward", "go backwards", "backwards", "go backward",  "go behind", "b", "backward", or "behind" as going backward.
+Carry out going backward:
+	now is southing is true;
+	try going south. 
+
+Before going south:
+	if is southing is false:
+		say "You try your best to interpret the earth's magnetic waves. But you just can't seem to figure them out. You go backwards instead.";
+	otherwise:
+		now is southing is false;
+		
+Is westing is a truth state that varies. Is westing is false.
+Going left is an action applying to nothing. Understand "left", "go left", "leftwards", "leftward", or "l" as going left.
+Carry out going left:
+	now is westing is true;
+	try going west. 
+
+Before going west:
+	if is westing is false:
+		say "You try your best to interpret the earth's magnetic waves. But you just can't seem to figure them out. You go left instead.";
+	otherwise:
+		now is westing is false;
+		
+Is easting is a truth state that varies. Is easting is false.
+Going right is an action applying to nothing. Understand "right", "go right", "rightwards", "rightward", or "r" as going right.
+Carry out going right:
+	now is easting is true;
+	try going east. 
+
+Before going east:
+	if is easting is false:
+		say "You try your best to interpret the earth's magnetic waves. But you just can't seem to figure them out. You go right instead.";
+	otherwise:
+		now is easting is false;
+		
+Instead of going northeast:
+	say "You don't see any place to go diagonal of you.".
+	
+Instead of going northwest:
+	say "You don't see any place to go diagonal of you.".
+	
+Instead of going southeast:
+	say "You don't see any place to go diagonal of you.".
+	
+Instead of going southwest:
+	say "You don't see any place to go diagonal of you.".
+	
+[Understand "forward", "go forward", "f", "ahead".
+Before going south:
+	say "You try your best to interpret the earth's magnetic waves. But you just can't seem to figure them out. You go forward instead.";]
+
+Chapter - Things
+
+Furniture is a kind of thing. Furniture is fixed in place.
+
+A secret door is a kind of door.
+A secret door can be revealed or unrevealed. A secret door is unrevealed.
+[A secret door is scenery.]
+A secret door is closed.
+
+To print you can't do it:
+	say "You don't think you can do that.".
+
+To print you don't see it:
+	say "You can't see anything of the sort.".
+	
+Before going through a secret door which is unrevealed:
+	print you can't do it instead.
+
+Before doing something to a secret door which is unrevealed:
+	print you don't see it instead.
+
+Section - Term Expansion
+
+Understand "observe [something]" or "stare at [something]" or "look at [something]"  or "inspect [something]" or "investigate [something]" or "study [something]" or "survey [something]" or "check [something]" or "look [something]" as examining.
+
+Understand "speak to [something]", "chat with [something]", "tell [something]", "ask [something]", "converse to [something]", "speak [something]", "chat [something]", "talk to [something]", "talk [something]", "speak with [something]", or "converse [something]" as talking to.
+
+Section - The Locket System
+
+A life necklace is a kind of thing. A life necklace is wearable. A life necklace has a number called temperature level. 
+
+The locket is a life necklace. The locket is wearable. The printed name of the locket is "heart-shaped locket". Understand "pendant", "necklace", "locket", "jewelry", "heart-shaped locket", "heart-shaped pendant", "heart-shaped necklace", "heart shaped locket", "heart shaped pendant", "heart shaped necklace", "heart pendant", "heart necklace", "heart locket", "silver heart-shaped locket", "silver necklace", "silver locket", "silver pendant", or "neck" as the locket. The temperature level of the locket is 1.
+
+Instead of touching the locket:
+	say "You [touching term] the heart-shaped locket. It [warmth of the locket].".
+	
+Instead of eating the locket:
+	say "You wouldn't dare. No matter how hungry you were. Or could digest metal.".
+	
+To say touching term:
+	say "[One of]wrap your hand around[or]wrap your hands around[or]touch[or]feel[or]hold[or]grasp[or]touch your hand to[or]gently clasp[purely at random]".
+
+The description of the locket is "A beautiful, silver, heart-shaped locket that hangs around your neck. It's a bit tacky to wear it all the time but you love it. 
+
+Strangely enough it changes temperature on occassion. Maybe you should try feeling it to see how warm it is right now.". 
+
+Instead of dropping the locket:
+	say "You drop the locket. But grab onto the chain before it hits the ground and put it back on. You can't bear to lose something so special to you.".
+	
+Table of Locket Temperatures
+level
+"barely has any warmth left"
+"feels fairly lukewarm"
+"feels pleasently warm"
+"feels really quite warm"
+"feels very warm, almost hot"
+"feels a bit hot"
+"feels very hot, but it doesn't seem to burn"
+"feels extremely hot, but no burning for some odd reason."
+
+[The max temperature level is a number that varies. The max temperature level is the number of rows in the Table of Locket Temperatures.]
+
+To say warmth of (item - a life necklace):
+	let TL be the temperature level of the item;
+	say "[level in row TL of the Table of Locket Temperatures]".
+	
+To warm the locket:
+	if the temperature level of the locket is less than the the number of rows in the Table of Locket Temperatures:
+		increase the temperature level of the locket by 1.
+	
+To cool the locket:
+	if the temperature level of the locket is greater than 0:
+		decrease the temperature level of the locket by 1;
+	if the temperature level of the locket is less than 1:
+		say "[conditional paragraph break][the loser message]";
+		end the story.
+	
+	
+Every turn when Ruth has the locket and Ruth is in a cold situation:
+	cool the locket;
+	if the temperature level of the locket is greater than 0:
+		say "Your locket feels a bit colder. This must be a bad situation.";
+	otherwise:
+		say "Your locket cools until all the warmth fades away."; 
+
+The loser message is a text that varies. "Oh boo-hoo, you failed. This text should not be here".
+
+[Every turn:
+	say "[the temperature level of the locket]";]
+	
+[Every turn when the temperature level of the locket is less than 1:
+	say "[the loser message]";
+	end the story.]
+
+Chapter - Miscellaneous
+
+Section - Title Setup
+
+To centre (t - an indexed text), bold or italic:
+	let N be the number of characters in T;
+	say spaces to centre N;
+	if bold, say bold type;
+	if italic, say italic type;
+	say T;
+	say roman type.
+	
+To say spaces to centre (n - a number) -- running on:
+(- print "^"; spaces (((VM_ScreenWidth() - {n})/2)-1); 
+-)
+
+Rule for printing the banner text : 
+	do nothing.
+	
+Section - Affirm/Deny Utility Action
+  
+Affirming is an action applying to nothing.
+Understand the command "yes" as something new.
+Understand the command "no" as something new.
+Understand "ok" or "sure" or "why not" or "alright" or "yes" or "y" or  "alrighty" or "affirmative" or "agree" or "do" as affirming.
+
+Denying is an action applying to nothing.
+Understand "no" or "no way" or "I'd rather not" or "nope" or "won't do it"  or  "never" or "negative" or "not" or "absolutely not" or "don't" as denying.
+
+Instead of saying yes:
+	Try the action of affirming.
+	
+Instead of saying no:
+	Try the action of denying.
+
+carry out affirming:
+	say "There's nothing for you to affirm.".
+	
+carry out denying:
+	say "There's nothing for you to deny.".
+	
+Section  - Scene Interludes
+
+scene index is a number that varies. scene index is 0.
+
+To scene-interlude :
+	say "[line break]";
+	say "[note style]---[roman type]";
+	say "[paragraph break]";
+	say  "[alert style]Press any key.[roman type]";
+	wait for any key;
+	clear the screen.
+
+Section - Formatting
+
+Needs extra line is a truth state that varies. Needs extra line is true.
+
+After reading a command:
+	if needs extra line is true:
+		say "[conditional paragraph break]".
+		
+Every turn:
+	if needs extra line is true:
+		say "[run paragraph on][conditional paragraph break]".
+		
+Table of User Styles (continued)
+style name	background color	color	first line indentation	fixed width	font weight	indentation	italic	justification	relative size	reversed
+special-style-1	--	"#3a3a3a"	0	false	bold-weight	--	false	center-justified	-1	false	
+special-style-2	--	"#424242"	0	false	light-weight	--	false	center-justified	6	false
+note-style	--	"#424242"	0	false	bold-weight	--	false	center-justified	-1	false
+alert-style	--	"#424242"	0	false	bold-weight	--	false	center-justified	-1	false
+blockquote-style	--	"#424242"	0	false	bold-weight	--	false	center-justified	4	false
+input-style	--	"#000000"	0	false	bold-weight	--	false	center-justified	-1	false
+
+Before printing the name of a room:
+	say "[input style]";
+
+After printing the name of a room:
+	say "[line break]";
+	
+Section - Hints
+
+Needs quip hint is a truth state that varies. Needs quip hint is true.
+
+Part - Settings
+
+Using-act is an action applying to one thing.
+Understand "use [something]" as using-act.
+
+Check using-act: 
+	if the noun is a door:
+		try the action of taking the noun;
+	otherwise:
+		say "You don't think you should be using that.".
+		
+Understand "use door" as exiting.
+
+Chapter - Your Place
+
+Your Place is a region. A Special Room, It's a  Small World - Cafe & Restaurant, Sarah's Apartment, and Your Bedroom are in Your Place.
+
+Section - A Special Room
+
+A Special Room is a room.
+The printed name of  A Special Room is "".
+The description of A Special Room is "".
+
+The white four panel door is a secret door. The white four panel door is scenery. The white four panel door is unrevealed. Understand "white door", "bedroom door", "four panel door", "white four panel door", "thin wooden door", "thin white door", "thin white wooden door", "panel door", or "white panel door" as the white four panel door. Understand "door in front", "forward door", or "front door" as the white four panel door when Ruth is in A Special Room. The description of the white four panel door is "A thin, white, wooden door with four equal sized panels etched into it. On it, there's an elegant looking metal knob etched with floral designs.
+
+	'Why am I looking at a door?' you think to yourself.". The white four panel door is north of A Special Room and south of Your Bedroom. The printed name of the white four panel door is "white four panel door in front of you".
+
+Instead of taking the white four panel door when Ruth is in A Special Room:
+	try the action of going forward instead.
+	
+Instead of taking the white four panel door when Ruth is in Your Bedroom:
+	try the action of going backward instead.
+
+Before going to Your Bedroom:
+	now the printed name of the white four panel door is "white four panel door behind you".
+
+After going to A Special Room from Your Bedroom:
+	try the action of closing the white four panel door ;
+	now the printed name of the white four panel door is "white four panel door in front of you".
+	
+Instead of exiting when Ruth is in A Special Room:
+	If Ruth is aware of new doors:
+		say "Which door?";
+		run a conversation on the Table of Door Inquiry;
+	otherwise:
+		try the action of going forward.
+		
+The windowed door is a secret door. The windowed door is unrevealed. Understand "windowed door", "metal-paneled door", "metal paneled door", "metal door", "dark-colored door", "thick door", "thick wooden door", "windowed wooden door", "thick windowed door", or "dark-colored wooden door" as the windowed door.  Understand "left door" as the windowed door when Ruth is in A Special Room. The description of the windowed door is "A thick, dark-colored wooden door with a bronze pull handle.The top half is an arched window, and the bottom is covered with a pair of decorative metal panels. You can see a sign behind the window saying 'OPEN'."
+
+The windowed door is west of A Special Room and south of It's a Small World. The printed name of the windowed door is "windowed door to the left of you".
+
+Instead of taking the windowed door when Ruth is in A Special Room:
+	try the action of going left instead.
+	
+Instead of taking the windowed door when Ruth is in It's a Small World:
+	try the action of going backward instead.
+
+Before going to It's a Small World:
+	now the printed name of the windowed door is "windowed door behind you".
+
+After going to A Special Room from It's a Small World:
+	try the action of closing the windowed door;
+	now the printed name of the windowed door is "windowed door to the left of you".
+	
+The windowed door is scenery.
+	
+The apartment door is a secret door. The apartment door is unrevealed. Understand "numbered door", "apartment door", "plain door", "plain panel-less door", "dusty dirty white door", "Sarah's door", "Sarah's apartment", "panel-less door", or "dirty white door" as the apartment door.   Understand "right door" as the apartment door when Ruth is in A Special Room. The description of the apartment door is "An old looking, white, panel-less door that appears to be poorly maintained. The numbers '218' have been mounted to the wall in metal-face. You see the viewing end of the spyhole shining right under it."
+
+The apartment door is east of A Special Room and south of Sarah's Apartment.  The apartment door is scenery.
+
+The printed name of the apartment door is "numbered door to the right of you".  
+
+Instead of taking the apartment door when Ruth is in A Special Room:
+	try the action of going right instead.
+	
+Instead of taking the apartment door when Ruth is in It's a Small World:
+	try the action of going backward.
+	
+Instead of exiting when Ruth is in Sarah's apartment:
+	try the action of going backward.
+
+Before going to Sarah's apartment:
+	now the printed name of the apartment door is "numbered door behind you".
+
+After going to A Special Room from It's a Small World:
+	try the action of closing the apartment door;
+	now the printed name of the apartment door is "numbered door to the right of you".
+	
+[The one on the left was a windowed door with metal panels, you can see a sign hanging behind the window but it was too fogged up to read. On the right, there was a plain panel-less door in a dusty, dirty white. On it you see old, metal numbers hinged on, [']218['], and what appears the be  the viewing end of a spyhole. ]
+
+Table of Quip Texts (continued)
+quip	quiptext  
+forward-door	""
+left-door	""
+right-door	""
+no-door	""
+
+Table of Door Inquiry
+prompt	response	enabled
+"The white four panel door in front of you."	forward-door	1
+"The windowed, metal-paneled door to your left."	left-door	1
+"The dusty, numbered door to your right."	right-door	1
+"Forget about it, I hate doors."	no-door	1
+
+Before quipping when the current quip is forward-door:
+	enable the forward-door quip;
+	terminate the conversation;
+	try going forward.
+	
+Before quipping when the current quip is left-door:
+	enable the left-door quip;
+	terminate the conversation;
+	try going left.
+	
+Before quipping when the current quip is right-door:
+	enable the right-door quip;
+	terminate the conversation;
+	try going right.
+	
+Before quipping when the current quip is no-door:
+	enable the no-door quip;
+	terminate the conversation.
+	
+Section - It's a Small World - Cafe & Restaraunt
+
+[Through the windowed door ]
+
+[It's a Small World is .
+A Special Room is a room south of It's a Small World.]
+
+[South of ]
+
+Section - Sarah's Apartment
+
+[Sarah's Apartment is east of A Special Room.]
+
+Section - Your Bedroom
+
+
+
+[Your Bedroom is north of A Special Room.]
+
+Part - Scenes
+
+Chapter - Narrative Scenes
+
+Section - Tea Time
+
+Tea Time is a scene. Tea Time begins when Ruth is unwell. Tea Time ends when Ruth is well.
+
+When Tea Time begins:
+	say "[second special style]A f t e r n o o n    T e a[paragraph break]";
+	say "";
+	say "[first special style]C.Y. Tan[roman type]";
+	say "[paragraph break] [paragraph break][line break]Laying on your stomach, you feel unbearably tired. You want to sleep, but it's too cold. Everything is cold. You feel like any moment now, you'll be frozen stiff.
+
+		You try to see, but you see nothingness. Everything is dark. Darker than black. You feel the darkness is growing, slowly enveloping you. It's unusually comforting. As if the darkness and the cold could take your tiredness away from you.
+
+		Blind, cold, and tired, you want to give in.[conditional paragraph break]".
+		
+Giving up is an action applying to nothing.
+Understand "give up/in/out/under/over" as giving up.
+Understand "I'm tired" or "sleepy" or "sleep" as giving up when  Tea Time is happening.
+
+Not giving up is an action applying to nothing.
+Understand the command "wake" as something new.
+Understand "don't give up/in/out/under/over" or "wake up" as not giving up.
+Understand "continue on" or "push on" or "continue" or "move forward" or "man up" or "get up" as not giving up when Tea Time is happening.
+
+Before affirming when Tea Time is happening:
+	try the action of giving up;
+	stop the action.
+		
+Before denying when Tea Time is happening:
+	try the action of not giving up;
+	stop the action.
+
+After giving up:
+	if Tea Time is happening:
+		say "[no line break]You sink your head into the pillows in silent defeat. You noticed you had forgotten to turn off the air conditioning. How silly.[paragraph break]";
+		drift to sleep;
+	otherwise:
+		say "I've already decided not to?".
+	
+Instead of looking when the turn count is 1:
+	now the turn count is 2;
+	do nothing;
+	
+Before doing something other than giving up or not giving up when Tea Time is happening:
+	if Ruth is not decided and the turn count is greater than 1:
+		say "You need to make a decision." instead.
+		
+After not giving up:
+	now Ruth is decided;
+	if Tea Time is happening:
+		if a cup of tea is not in A Special Room:
+			say "[conditional paragraph break]You steel your resolve and you feel a subtle warmth come from within. With what little strength you can muster, you lift the head that you had dug into your arms. You open your eyes.
+
+			Blinding white.
+
+			In all directions, it's white as fresh snow. Lit like new dawn. 
+
+			Out of the corner of your eye, you see dark edges. Walls. You were in a room. An inexplicably white room that was inexplicably lit. Before you, you see a cup of tea. 
+			
+			It's steaming.";
+			now the cup of tea is in A Special Room;
+		otherwise:
+			say "You already decided not to give up.";
+	otherwise:
+		say "I've already decided not to. But, er-, go me?".
+			
+The cup of tea is a thing. The description is "It’s steaming quite a lot. Its probably very hot. You wonder if you should try to cool it off first.".
+The cup of tea can be spilled. The cup of tea can be scalding. The cup of tea is scalding.
+Understand "tea" or "cup" or "tea cup" or "teacup" or "fluid" or "drink" or "cup of tea" or "it" as a cup of tea when Tea Time is happening.
+
+Tea-taking is an action applying to one thing.
+Understand "take [something]" or "eat [something]" or "drink [something]" or "tea [something]" or "cup [something]" or "grab [something]" or "acquire [something]" or "reach [something]" or "get [something]" or "collect [something]"  or "seize [something]" or "clasp [something]" or "hold [something]" or "obtain [something]"  or "clutch [something]" or "snag [something]" or "grasp [something]" or "secure [something]" or "have [something]" or "pick up [something]" or "attain [something]" as tea-taking when Tea Time is happening.
+
+Tea-licking is an action applying to one thing.
+Understand "lick [something]", "lick at [something]", "tongue [something]",  or "slurp [something]" as tea-licking.
+
+Check tea-licking:
+	say "[conditional paragraph break]You try your best, but your tongue just isn't long enough.".
+
+Before examining when Tea Time is happening:
+	if the cup of tea is not in A Special Room:
+		say "You're having a hard time examining [noun].";
+		stop the action.
+		
+Check tea-taking: 
+	if the noun is not the cup of tea:
+		say "There has to be something else.";
+	otherwise if the cup of tea is scalding:
+		if the cup of tea is not spilled:
+			say "You sluggishly stretch out your arm to lightly take the cup of tea by its handle, being sure to curl your ring finger and pinkie towards your wrist. Manners must come first.
+
+			Given your situation, you feel rather disappointed with your mental priorities and begin to let out a sigh. You let out a high pitched yelp instead.
+
+			Hot. Scalding hot. 
+
+			You drop the tea cup and by sheer luck, it lands upright after splashing out half its contents. Perhaps you shouldn’t have been so careless.
+			
+			[bracket]Hint - Consider 'looking at' or 'examining' the tea.[close bracket][paragraph break]";
+			now the tea is spilled;
+		otherwise: 
+			say "For some reason, you figured that by repeating the same action in the face of failure would result in things just working out. You reach for the tea once again, making sure to handle it with proper etiquette.
+
+			Still hot. Burning hot.
+			
+			You drop the tea cup again and sink your head into the pillows in silent defeat as the tea wets your sheets. You noticed you had forgotten to turn off the air conditioning. ";
+			drift to sleep;
+	otherwise if the cup of tea is not scalding: 
+		say "Feeling like your body is about to give out, you throw an arm towards the cup grabbing it weakly. 
+
+		It’s warm. Pleasant and mild.
+
+		You want nothing more than to replace the suffocating cold with its warmness. So you do. You drink as quickly as you can, being sure not to waste a drop. Suddenly, the cold leaves you. Just as the darkness had.
+
+		But you were still tired.
+
+		The warmth was comfortable and you yawn in relief. You see your breath drift off into the cold as you doze off.";
+		remove the cup of tea from play;
+		now Ruth is well;
+		scene-interlude;
+		now the scene index is 1.
+		
+Tea-blowing is an action applying to one thing.
+Understand "blow on [something]" or "cool [something]" or "freeze [something]" or "chill [something]" or "frost [something]" or "blow [something]" or "temper [something]" or "coldify [something]" or "cool off [something]" as Tea-blowing when Tea Time is happening.
+
+Check tea-blowing:
+	if the noun is not the cup of tea:
+		say "[conditional paragraph break]You feel that cooling that off would be pointless. You cool it anyways. It was pointless.";
+	otherwise:
+		say "You decide that now was not the time to worry about tea etiquette and blow on the tea, exhausting as it may be. 
+		
+		Your cold breath is rather effective.[paragraph break]";
+		now the tea is not scalding.
+		
+After reading a command when Tea Time is happening:
+	[if the turn count is 2:
+		[now the turn count is 2;]
+		say "[conditional paragraph break]You need to make a decision.";]
+	if the turn count is greater than 8:
+		say "[conditional paragraph break]Taking too long, you sink your head into the pillows in silent defeat. You noticed you had forgotten to turn off the air conditioning. How silly.[paragraph break]";
+		drift to sleep.
+			
+Every turn when the remainder after dividing the turn count by 2 is 0 and Tea Time is happening and the cup of tea is not in A Special Room:
+	say "[conditional paragraph break]You want to give in. Do you?".	
+		
+Instead of doing something other than tea-licking, giving up, not giving up, affirming, denying, looking, examining, tea-taking, or tea-blowing when Tea Time is happening:
+	if  the cup of tea is not in A Special Room:
+		say "You're cold and tired. It's also dark. You really can't.";
+	otherwise:
+		if the noun is not a cup of tea:
+			say "[conditional paragraph break]You're cold and tired. There must be a better thing to do with what little energy you have. [conditional paragraph break]";
+		otherwise:
+			say "[conditional paragraph break]You're cold and tired. You don't think you could do that to the tea. [conditional paragraph break]"
+	
+Check looking:
+	if Tea Time is happening and the cup of tea is not in A Special Room and the turn count is not 1:
+		say "At what?"
+		
+To drift to sleep:
+	say "As you slowly drift off to sleep, you begin to realize that you never even had air conditioning. And you certainly never had multiple pillows, just the one. You hear faint tempoed beeps echo in the distance. 
+
+	As you try to remember more, the tempo gradually slows until the beeps merge into a single low tone. Your glimmer of estranged memories seem to flicker out in the darkness. 
+
+	[quotation mark]Cold.  It’s so cold.[quotation mark]
+
+	The thought echoes as your mind goes blank.";
+	end the story.
+	
+Section - Guest of Honor 
+
+Guest of Honor is a scene. Guest of Honor begins when scene index is 1. Guest of Honor ends when the scene index is 2.
+
+A couch is a kind of supporter. A couch is fixed in place. A couch is always enterable.  Every couch allows seated and reclining. The couch is usually seated.
+
+The black velvet couch is a couch. The description of the black velvet couch is "A very comfortable looking couch with a pair of black, laced throw pillows. You kind of want to sit on it.". Understand "couch", "black couch", "black velvet couch", "velvet couch", "couchie", "sofa", "black sofa", "velvet sofa", or "black velvet sofa" as the black velvet couch.
+
+When Guest of Honor begins:
+	say "[input style]CHAPTER 2[roman type][line break]";
+	say "[blockquote style]Guest of Honor[roman type][line break][line break]";
+	say "Laying on your stomach, you wonder how you managed to fall asleep in this awkward position. 
+
+	To cozy up, you start to curl up until you hear a slight rustling near you. You tense up and look up. 
+
+	You see a warm smile cleaning up the ";
+	if the cup of tea is spilled:
+		say "tea you had spilled";
+	otherwise:
+		say "drool you had left tumbling about";
+	say ". You feel a tad embarrassed but look him straight in the eye and smile back ear to ear. He looks away as if he felt your embarrassment for you. He continues his cleaning. You blow the hair out of your face.";
+	now the printed name of Richmund is "him";
+	now the printed name of A Special Room is "A Room";
+	now description of A Special Room is "'A pure white four-walled room. It's inexplicably lit.'";
+	now Richmund is in A Special Room.
+
+Stalking Richmund is an action applying to nothing.
+
+check Stalking Richmund:
+	if Ruth is not laying down:
+		say "Before talking anymore to him, you decide to take a better look at him. Just to be safe. ";
+	otherwise:
+		say "Before talking to him, you decide to take a better look at him. Just to be safe. ";
+	say "[paragraph break]Your brain hiccups go wild. 
+
+		[quotation mark]Wow. Classy. As. Shit. He looks exactly like one of those fancy-ass butlers in that, er-, British drama I binge-streamed last week. Cufflinks, combed hair, white gloves, the whole shebang.[quotation mark]
+
+		You fling your hands to your mouth, noticing only afterwards that you hadn’t actually opened it. You wondered if people still said [quotation mark]shebang[quotation mark] (probably not) as you actually avert your eyes in embarrassment. 
+
+		[quotation mark]Thank god I hadn’t said that out loud[quotation mark], you say out loud as you remove your hands from your mouth. He looks at you with concern. You feel stupid. He goes back to cleaning up after you.
+
+		Still, you hadn’t realized you were so crass. As a matter of fact, you hadn’t realized that you were much of anything. Just who were you? You felt like you had glimpses of your own thoughts, tied to memories that were dangling just out of your reach. Did you watch a British drama? How did you [quotation mark]binge-stream[quotation mark] it? What exactly is a [quotation mark]shebang[quotation mark]? But you decided to worry about that later. 
+
+		Afterall, you felt like you were an act-first-think-later kinda gal. 
+
+		[quotation mark]Gal? What the shit is wrong with my vocabulary?[quotation mark] you think to yourself.
+
+		You go back to your original intention of eyeballing the guy. A distinct mole on the earlobe, jet-black hair that had been swept-back, blue eyes, broad shoulders, strong chin, you felt like a stalker.";
+	now Richmund is examined;
+	if Ruth is laying down:
+		say "[line break][quotation mark]What an exciting feeling[quotation mark] you think to yourself as you immediately knock your head into the floor. 
+		
+		You really couldn't be any more disappointed with your internal monologue.[paragraph break]";
+	say "[line break][quotation mark]What’s up cool guy.[quotation mark]
+
+		[quotation mark]Good afternoon madam.[quotation mark][conditional paragraph break]";
+	if Ruth is laying down:
+		say "[conditional paragraph break][quotation mark]Sooo-[quotation mark]
+
+		[quotation mark]Sorry to interrupt madam but-[quotation mark]
+
+		[quotation mark]As you should be, but?[quotation mark]
+
+		[quotation mark]Lying face down on the floor might not be the most seemly of positions for a lady to hold a conversation.[quotation mark]";
+		if needs quip hint is true:
+			now needs quip hint is  false;
+			say "[paragraph break]Enter a corresponding number to respond.";
+		run a conversation on the Table of Richmund's Getting Up Inquiry;
+	otherwise:
+		run a conversation on the Table of Richmund Conversation;
+	
+The description of Richmund is "[quotation mark]I wonder what his deal is?[quotation mark] you think to yourself".
+
+Instead of talking to Richmund when Richmund is not examined:
+	try Stalking Richmund.
+
+Instead of looking when Richmund is not examined and Guest of Honor is happening:
+	try Stalking Richmund.
+
+Getting up is an action applying to nothing. Understand "get up", "stand up", "on your feet", "stand", "rise", "arise", or "ascend" as getting up when Ruth is laying down.
+
+Instead of exiting when Guest of Honor is happening and Ruth is laying down:
+	try the action of getting up.
+	
+
+check getting up:
+	now the black velvet couch is in A Special Room;
+	if Ruth is laying down:
+		say "[quotation mark]Ah--er, right.[quotation mark]
+		
+			You bring yourself to your feet and you notice your body is still heavy. Not from being cold or tired but rather from what feels like waves of fabric that seem to be tugging at your shoulders. 
+
+			You look at your hands, your sleeves, wow, you had sleeves. Rather ornate ones for that matter. You pat down your skirt as you notice emerald ribbons running along the seams. 
+
+			[quotation mark]Oh god, did he dress me[quotation mark], you think to yourself as you take two steps back and glare at him with malice.
+
+			[quotation mark]Madam, I didn’t dress you. You arrived here this way.[quotation mark]
+
+			[quotation mark]Liar.[quotation mark]
+
+			[quotation mark]Honest.[quotation mark]
+
+			You thought about calling him a liar again but you decided there were more important things at hand. You settle for glaring at him a moment longer.
+			
+			[quotation mark]Please have a seat madam.[quotation mark]";
+		now Ruth is not laying down;
+		now Ruth is standing;
+		if needs quip hint is true:
+			now needs quip hint is  false;
+			say "[paragraph break]Enter a corresponding number to respond.[run paragraph on]";
+		run a conversation on the Table of Richmund's Seating Inquiry;	
+
+Instead of jumping when Ruth is laying down:
+	say "You should probably get up first.".
+
+
+Table of Quip Texts (continued)
+quip	quiptext  
+richmunds-greeting 	"" 
+listen-to-richmund-and-sit	""
+screw-richmund-sitting-is-for-chumps	""
+richmund-would-like-you-to-sit	""
+listen-to-richmund-and-get-up	""
+screw-richmund-getting-up-is-for-chumps	""
+ask-richmund-who-he-is	""
+ask-richmund-who-you-are	""
+ask-richmund-to-stop-madaming	""
+ask-richmund-why-hes-here	""
+ask-richmund-where-you-are	""
+ask-richmund-why-youre-here	""
+ask-richmund-to-style-hair	""
+ask-richmund-if-youre-dead	""
+ask-richmund-about-cold	""
+ask-richmund-about-sky	""
+ask-richmund-how-to-get-out	""
+ask-richmund-about-mirror	""
+ask-richmund-about-napping	""
+tell-richmund-youre-ready	""
+tell-richmund-to-suck-it	""
+tell-richmund-to-sit	""
+tell-richmund-to-bring-tea	""
+end-conversation-with-richmund	""
+
+The litany of Richmund is the Table of Richmund Conversation.
+
+Before quipping when the current quip is ask-richmund-who-he-is: 
+	say "'Who are you?'
+
+		'Richmund'.
+		
+		You wait for him to say more.
+		
+		'Anything else?'
+		
+		'I’ve been employed to serve you, madam.'
+		
+		'Employed? By who?'
+		
+		'By people who care dearly about you.'
+		
+		'About me? Again, who?'
+		
+		'I’m afraid I can’t say.'
+		
+		You think for a while.  Close to you? You can’t recall anyone off the top of your head. In fact, you can’t seem to recall anyone period. You guess asking more about it would be pointless.
+		
+		'So how exactly do you [']serve[']?'
+		
+		'I serve tea and answer questions, madam.'
+		
+		'You’re not doing either of those. Well, maybe the second one, but not very well.'
+		
+		'Shall I bring you some tea?'
+		
+		'Sure, it’s a little bit cold in here anyways.'
+		
+		Rubbing your shoulders, you glance away and glance back. He reappears with a cart of tea and sweets.
+		
+		'Holy sh-'
+		
+		'Madam, I ask that you refrain from swearing, it’s unbecoming.'
+		
+		You glare at him, and grab the cup he’s pouring. 
+
+		You take a sip and then have some [tea-food], wondering if this is right time to be doing this. The tea does make you feel unusually warm though. You forget what you were asking.";
+	now the printed name of Richmund is "Richmund";
+	now the tea-cart is in A Special Room;
+	enable the tell-richmund-to-bring-tea quip in the Table of Richmund Conversation;
+	now Ruth is aware of Richmund's name;
+	if Ruth is mirror-weary:
+		enable the tell-richmund-youre-ready quip in the Table of Richmund Conversation.
+	
+Before quipping when the current quip is ask-richmund-who-you-are:
+	say "'So, who am I?'
+
+		He pauses for a while.
+		
+		'Don’t say you can’t tell me.'
+		
+		He smiles politely and pauses a bit longer.
+		
+		'Monena.'
+		
+		'Really? Ok. Wow you actually answered me. But, what an odd name.'
+		
+		Curious, you take a second to think more about the name, wondering if you can learn more about yourself as you spell it out in your head. Suddenly, something clicks.
+		
+		'Wow, bite me. That’s an anagram for 'no name'.'
+		
+		He looked away before you finished speaking.
+		
+		You glare at him, figuring that pestering him anymore about this would be pointless.
+		
+		'I’m terribly sorry, madam.'
+		
+		'You better be.'
+		
+		You hear a muffled chuckle.".
+		
+Before quipping when the current quip is ask-richmund-why-hes-here:
+	say "'Why are you here?'
+
+		'I’m here to help you get ready for your appointment.'
+		
+		'Appointment?'
+		
+		'Yes.'
+		
+		'No, I meant give me more details.'
+		
+		'About what?'
+		
+		'The appointment.'
+		
+		'I’m afraid I can’t, madam.'
+		
+		'So I have an appointment that I know nothing about?'
+		
+		'For now. But I’m sure you’ll figure out more about it soon, madam.'
+		
+		'I’ll just [']figure it out[']? You’re not being very helpful.'
+		
+		'My deepest apologies, I wish I could tell you more, madam.'
+		
+		You take a slightly deeper breath as you look away with uncertainty.
+		
+		'So how am I supposed to figure it out? I can’t even figure out who I am.'
+		
+		'That’s what I’m here for.'
+		
+		 You suddenly feel very annoyed but rather than arguing his logic, you figure that asking any more about this might be pointless and give up.".
+		
+Before quipping when the current quip is ask-richmund-where-you-are:
+	say "'Where am I?'
+
+		'A room, madam.'
+		
+		You look at him with disappointment.
+		
+		'Please.'
+		
+		'I’m sorry. [italic type]The[roman type] room.'
+		
+		You look at him with even more disappointment.
+		
+		'I’m afraid I can’t tell you much more, madam. But please do feel free to look around.'
+		
+		You decided to leave it at that and look around afterwards.";
+	now the printed name of A Special Room is "The Room".
+
+Before quipping when the current quip is ask-richmund-why-youre-here:
+	say "'Why am I here?'
+
+		'Because this place was made for you madam. A product of your fate.'
+		
+		'Excusemewhat?'
+		
+		'This is a good place for good people, madam.'
+		
+		'I’m good people?'
+		
+		'Yes.'
+		
+		'Ok. Great. Is that all I’m gonna get?'
+		
+		'Sorry, madam.'
+		
+		'It’s ok, I guess.'".
+
+[After quipping when the current quip is  ask-richmund-who-you-are:]
+
+After quipping when the interaction level of Richmund is 4 and Ruth is aware of Richmund's name and Guest of Honor is happening:
+	enable the ask-richmund-to-style-hair quip in the Table of Richmund Conversation;
+	
+After quipping when the current quip is ask-richmund-who-he-is and the interaction level of Richmund is greater than 2 and Guest of Honor is happening:
+	enable the ask-richmund-to-style-hair quip in the Table of Richmund Conversation.
+	
+When Guest of Honor ends:
+	disable the ask-richmund-to-style-hair quip in the Table of Richmund Conversation;
+	disable the tell-richmund-to-sit  quip in the Table of Richmund Conversation;
+	disable the ask-richmund-about-mirror quip in the Table of Richmund Conversation;
+	disable the ask-richmund-about-cold quip in the Table of Richmund Conversation;
+	
+Before quipping when the current quip is ask-richmund-to-style-hair:
+	if Ruth is laying down:
+		say "'You realized that you should probably stand up first.";
+		try the action of getting up;
+	say "'Can you fix my hair?'
+	
+		'Of course, madam.'
+	
+		From the tea cart, he presents a large set of salon products and begins his work. You hadn’t realized that you were so worried about your appearance and two hours later, you wish you hadn’t bothered. He finishes, and you [italic type]feel[roman type] prettier.[conditional paragraph break]";
+	if Ruth is not mirror-weary:
+		say "'[conditional paragraph break]Can you show me a mirror?'
+		
+		'I can, but I’m afraid it won’t work.'
+		
+		'What, why?'
+		
+		'Please understand madam.'
+		
+		You clearly don’t but you figure asking more into it isn’t going to lead anywhere.";
+	otherwise:
+		say "[conditional paragraph break]You wish you could take a look in a mirror but you know it wouldn't do any good.";
+	say "[conditional paragraph break]'Hm. Do I look lovely?'
+	
+		'Like a sunset rose.'
+		
+		You mess your hair up again.".
+		
+[When Ruth is mirror-weary:
+	enable the ask-richmund-about-mirror quip;
+	enable the ask-richmund-if-youre-dead quip.
+	tell-richmund-youre-ready]
+
+Before quipping when the current quip is ask-richmund-if-youre-dead:
+	say "You wanted to make sure it seems a bit obvious if this is like any of the surrealist stuff you've watched. Of course, you can’t remember a single one of them.
+	
+	'So am I dead?' 
+	
+	'No, madam.'
+	
+	'So, am I alive?'
+	
+	'No, madam.'
+	
+	You look at him dully.
+	
+	'So what am I?'
+	
+	He pauses a moment.
+	
+	'Why, you’re [italic type]you[roman type], madam.'
+	
+	You want to punch him. You’re going to punch him. You decide not to punch him.".
+	
+	
+	[Before quipping when the current quip is :
+	say "".];
+	
+After quipping when the interaction level of Richmund is 4:
+	enable the ask-richmund-about-cold quip;
+	
+Before quipping when the current quip is ask-richmund-about-cold:
+	say "Why isn’t it cold anymore?
+	
+		'Was it cold? I’m sorry, I’ll fetch something more for you to wear madam'
+
+		'No it’s ok, I’m not that cold anymore.'
+
+		'As you say madam.'".
+		
+After quipping when the interaction level of Richmund is 5:
+	enable the ask-richmund-about-sky quip;
+	
+Before quipping when the current quip is ask-richmund-about-sky:
+	say "Why is the sky blue?
+	
+	Honestly, you wonder what’s wrong with yourself sometimes.
+
+	'Well madam, molecules in the air scatter blue light more so than other colors. This is because of how the electromagnetic field of light waves induce electric dipole moments in these molecules.'
+
+	'Er, thanks.'
+	
+	'Of course, madam.'".
+	
+After quipping when the current quip is ask-richmund-why-youre-here:
+	enable the ask-richmund-how-to-get-out quip.
+	
+Before quipping when the current quip is ask-richmund-how-to-get-out:
+	say "'You’ll be leaving when you’re ready for your appointment, madam.'
+	
+		You suppose asking any further about that would be pointless.
+		
+		'Yeah, yeah. I got it.'".
+	
+Before quipping when the current quip is ask-richmund-about-mirror:
+	say "Hey, why can’t I see myself in the mirror?
+	
+		'Do you know who you are yourself madam?'
+		
+		'Well, you know that I don’t.'
+		
+		'That’s why, madam.'
+		
+		'What a half-assed answer' you think to yourself. You give him a dissatisfied look.
+		
+		'If you don’t know yourself, madam, a mirror is the last thing that will be able to tell you who you are.'
+		
+		'I was hoping for something more substantial.'
+		
+		'My apologies.'".
+
+After quipping when the interaction level of Richmund is 7:
+	enable the ask-richmund-about-napping quip in the Table of Richmund Conversation;
+
+Before quipping when the current quip is ask-richmund-about-napping:
+	say "'Hey, I’m still kinda sleepy. It is alright if I take a nap?'
+	
+		'I would strongly advise against it madam. Sleeping will more than likely cause you to miss your appointment.'
+		
+		'Can’t you just wake me up?'
+		
+		'I’m afraid the responsibility lies with you madam.'
+		
+		'It’s not that hard to wake me up, Richmund.'
+		
+		He pauses for a moment,
+		
+		'You mustn't fall asleep madam. I assure you that it'll be in your best interest.'
+		
+		He looks rather serious. You decide not to pry any more.".
+		
+After quipping when the interaction level of Richmund is 6:
+	enable the tell-richmund-to-suck-it quip in the Table of Richmund Conversation;
+	
+Before quipping when the current quip is tell-richmund-to-suck-it:
+	say "'You bother me.'
+	
+	You see his smile falter for half a moment.
+	
+	'My sincere apologies, madam. Is there anything that you prefer I do?'
+	
+	'Yes, please leave.'
+	
+	'Until the appointment, I’m bound here, same as you madam.'
+	
+	You wonder if you were a bit harsh. You give him an honest, apologetic smile. He does the same back.".
+	
+After quipping when the interaction level of Richmund is 3 and Guest of Honor is happening:
+	enable the ask-richmund-to-stop-madaming quip in the Table of Richmund Conversation;
+	
+When Guest of Honor ends:
+	disable the ask-richmund-to-stop-madaming quip in the Table of Richmund Conversation.
+	
+Before quipping when the current quip is ask-richmund-to-stop-madaming:
+	say "‘Could you please stop calling me madam?’
+
+		‘My apologies, did I offend you?’
+
+		‘No. Well, maybe yes? Anyways, I’m not really used to be called that.’
+
+		‘Understo-’
+
+		‘ Also, isn’t [‘]madam[’] used to refer to you know, older women? I at least remember being pretty young.’ 
+
+		‘I se-’
+
+		‘And you know, I’m not saying like, I’m a kid. I [italic type]pretty[roman type] sure I finished college. I mean, I know a lotta words.’
+
+		He pauses to see if you’re finished. You look back unphased but still displeased.
+
+		‘How would you like to me to refer to you then?’
+		
+		'Just call me-'
+
+		You think for a moment and realize you don’t know you own name.  You pause in embarassment.
+
+		‘Uh, madam is fine’ you mutter quietly.
+		
+		‘Very well, madam.’".
+	
+Before quipping when the current quip is tell-richmund-to-bring-tea:
+	say "'Bring me more tea please.'
+	
+		'Yes, of course. What kind madam?'
+		
+		'Er, [whatever tea].'
+		
+		'Understood, madam.'
+		
+		He pours you some [tea] and you help yourself to [amount] [tea-food] while you drink. 
+		
+		You feel a refreshing warmth.
+		
+		'Thanks [bro], I was feeling a bit cold.'
+		
+		'Always a pleasure madam.'";
+	if the temperature level of the locket is less than 3:
+		now the temperature level of the locket is 3;
+	enable the tell-richmund-to-bring-tea quip in the Table of Richmund Conversation.
+
+To say tea-food:
+	say "[one of]raspberry and chocolate teacake[or]banana custard mini eclair[or]strawberry and white chocolate choux bun[or]hazelnut teacake[or]pistachio and orange madeleine[or]fresh scone with jam and clotted cream[or]orange and coriander tea cake[or]apple scone with blackberry compote[or]buttermilk scone with jam[or]fresh scone with orange blossom jam[or]fresh scone with gooseberry and vanilla jam[or]toasted teacake with apricot compote[or]slice of shortbread[or]custard and white chocolate biscuit[or]raspberry, white chocolate and pistachio profiterole[or]vanilla custard slice[or]spiced maple and pecan cheesecake bar[then purely at random]".
+	
+To say amount:
+	say "[one of]a[or]half a[or]a nibble of a[or]a few bites of a[or]some of a[as decreasingly likely outcomes]".
+	
+To say bro: 
+	say "[one of]bro[or]dude[or]Richmund[or]brochacho[or]homeboy[or]brah[or]broski[purely at random]".
+	
+To say tea:
+	say "[one of]blended tea[or]earl-gray tea[or]jasmine tea[or]black tea[as decreasingly likely outcomes]".
+	
+To say whatever tea:
+	say "[one of]any[or]whatever[or]any kind[or]whatever kind[or]whichever kind[or]don't care[or]no clue[or]surprise me[or]you know, that one kind[purely at random]".
+
+Before quipping when the current quip is tell-richmund-to-sit:
+	say "Hey, you sit down too.
+	
+		As you wish, madam.".
+	
+Falling asleep is an action applying to nothing. Understand "sleep", "fall asleep", "snooze" as falling asleep when Tea Time is not happening.
+
+After falling asleep:
+	if Ruth is in A Special Room:
+		say "As you slowly drift off to sleep,  you hear faint tempoed beeps echo in the distance. 
+
+		The tempo gradually slows until the beeps merge into a single low tone. You see glimmers of estranged memories flicker out in the darkness. 
+
+		[quotation mark]Cold.  It’s so cold.[quotation mark]
+
+		The thought echoes as your mind goes blank.";
+		end the story.
+		
+Before quipping when the current quip is end-conversation-with-richmund:
+	say "[conversation ender][conditional paragraph break]
+		'[richmund goodbye], madam.'[conditional paragraph break]";
+	now the current quip is quip_null;
+	enable the end-conversation-with-richmund quip in the Table of Richmund Conversation;
+	terminate the conversation;
+	if Ruth is not mirror-weary:
+		try taking a look around the room.
+
+Instead of going when the qbc_litany is not the Table of No Conversation:
+	say "Now that's rude, you shouldn't leave when you're in the middle of a conversation.";
+	display the QBC options.
+	
+Before quipping when the current quip is richmunds-greeting:
+	say "'[greeting] [richmund pronoun].'
+	
+		'[richmund greet] madam.'".
+		
+To say greeting:
+	say "[one of]Hey[or]Hi[or]Hiya[or]Pay attention to me[or]Talk to me[or]Sooo[or]Namaste[as decreasingly likely outcomes]".
+	
+To say richmund pronoun:
+	say "[one of][if Ruth is aware of Richmund's name][one of]Richmund[or]Rich[as decreasingly likely outcomes][otherwise]butler-guy[end if][or]dude[or][as decreasingly likely outcomes]".
+
+To say richmund greet:
+	say "[one of]Good afternoon[or]Good day[or]Hello[as decreasingly likely outcomes]".
+	
+To say conversation ender:
+	say "[one of]'This conversation is donion rings.'[or]'Stop talking.'[or]'I'm gonna stop talking now.'[or]'Gotta run.'[or]'Well, I'm gonna go.'[or]'Anyways, bye.'[or]'I'll talk to you later.'[or]'Talk to you later.'[or]'My throat is tired?'[or][if Ruth is not laying down]You wave and walk away.[end if][purely at random]".
+	
+To say richmund goodbye:
+	say "[one of]Very well[or]Very good[or]Understood[or]As you wish[or]Goodbye[purely at random]".
+	
+Taking a look around the room is an action applying to nothing.
+
+The tea-table is a furniture. The description of the tea-table is "A short wooden table. You want to say walnut, but you're pretty sure you don't know your wood types. It's draped with a white ruffled table cloth.". The printed name of the tea-table is "tea table". Understand "tea table", "table", or "tea-table" as tea-table.
+
+The tea-cart is a furniture. The description of the tea-cart is "A mysterious silver-polished tea cart, on it you see a flowery white tea set. The sides are draped by a clean white cloth laced with flowery patterns at the ends. You're curious about what's inside but you don't feel like Richmund would show you.". The printed name of the tea-cart is "tea cart". Understand "tea cart", "cart", "tea-cart", "Richmund's cart", or "Rich's cart" as the tea-cart.. 
+
+The wall-mirror is a furniture. The description of the wall-mirror is "You see a reflection of Richmund and the things in the room. However, you don't see yourself.". The printed name of the wall-mirror is "wall mirror". Understand "mirror", "wall-mirror", or "wall mirror" as the wall-mirror.
+
+Carry out taking a look around the room:
+	now the tea-table is in A Special Room;
+	now the wall-mirror is in A Special Room;
+	say "[conditional paragraph break]";
+	if Ruth is laying down:
+		try getting up;
+	otherwise:
+		say "You take a quick look around the room and see a black velvet couch, a tea table, and well, [if Ruth is aware of Richmund's name]Richmund[otherwise]that guy[end if].
+			
+			Behind you, you see a massive mirror spanning the entirety of the wall behind you.
+			
+			'Neat.'
+			
+			You try to check yourself out but you notice there's no reflection, at least not for you. Though, you see Richmund, the sofa, and the table in the mirror, you're nowhere to be found. 
+			
+			You feel your front teeth, wondering if you had become a vampire. No luck.
+			
+			In the reflection, you also see three white doors on the three other walls in the room. You turn around but you don't actually see them in the room. 
+			
+			'Well, that's odd.'[run paragraph on][line break]";
+		now Ruth is mirror-weary;
+		enable the ask-richmund-about-mirror quip in the Table of Richmund Conversation;
+		enable the ask-richmund-if-youre-dead quip in the Table of Richmund Conversation;
+		enable the tell-richmund-youre-ready quip in the Table of Richmund Conversation. 
+		
+Before quipping when the current quip is tell-richmund-youre-ready: 
+	say "'Well let's get to it then, Richmund?' 
+	
+		You’re totally winging it.
+		
+		'As you wish, madam.'
+		
+		He snaps his fingers and a white four panel door appears on the wall in front of you.
+		
+		'At your leisure, madam.'
+		
+		'Uh, ok. Why not.'";
+	now the white four panel door is revealed;
+	now the white four panel door is not scenery.
+	
+Table of Richmund Conversation
+prompt	response	enabled	
+"Ask him who he is."	ask-richmund-who-he-is	1
+"Ask him who you are."	ask-richmund-who-you-are	1
+"Ask him to stop calling you 'madam'."	ask-richmund-to-stop-madaming	0
+"Ask him why he's here."	ask-richmund-why-hes-here	1
+"Ask him where you are."	ask-richmund-where-you-are	1
+"Ask him why you're here."	ask-richmund-why-youre-here	1
+"Ask him to fix your hair."	ask-richmund-to-style-hair	0
+"Ask him if you're dead."	ask-richmund-if-youre-dead	0
+"Ask him why it isn't cold anymore."	ask-richmund-about-cold	0
+"Ask him why the sky is blue."	ask-richmund-about-sky	0
+"Ask him how to get out of here."	ask-richmund-how-to-get-out	0
+"Ask him why you can't see yourself in the mirror."	ask-richmund-about-mirror	0
+"Ask him if it's ok to go back to sleep."	ask-richmund-about-napping	0
+"Tell him you're ready."	tell-richmund-youre-ready	0
+"Tell him he bothers you."	tell-richmund-to-suck-it	0
+"Tell him to bring you some tea."	tell-richmund-to-bring-tea	0
+"Tell him to sit as well."	tell-richmund-to-sit	0
+
+Table of Richmund's Seating Inquiry
+prompt	response	enabled
+"Have a seat."	listen-to-richmund-and-sit	1
+"Be belligerent."	screw-richmund-sitting-is-for-chumps	1
+
+Before quipping when there is a prompt corresponding to the response of the current quip in Table of Richmund Conversation:
+	if the enabled corresponding to the response of the current quip in the Table of Richmund Conversation is 0:	
+		Increase the interaction level of Richmund by 1.
+
+Before quipping when the current quip is listen-to-richmund-and-sit: 
+	say "You sit down on a black velvet couch beside you. He smiles politely in response.[conditional paragraph break] ";
+	enable the tell-richmund-to-sit quip in the Table of Richmund Conversation;
+	silently try the action of sitting on the black velvet couch;
+	if Richmund is not examined:
+		try stalking Richmund;
+	otherwise:
+		say "[conditional paragraph break]You look up at him as you decide to begin the conversion.";
+		shift the conversation to the Table of Richmund Conversation.
+	
+Before quipping when the current quip is screw-richmund-sitting-is-for-chumps: 
+	say "[quotation mark]I stood up for a reason.[quotation mark]
+	
+		He pauses for a short moment.
+		
+		[quotation mark]Understood, madam.[quotation mark]
+
+		Your legs feel like they’ll get tired. As you ponder whether or not you have issues with authority, you decide to begin the conversation.[run paragraph on]";
+	shift the conversation to the Table of Richmund Conversation.
+
+Table of Richmund's Getting Up Inquiry
+prompt	response	enabled
+"Get up."	listen-to-richmund-and-get-up	1
+"Refuse."	screw-richmund-getting-up-is-for-chumps	1
+
+Before quipping when the current quip is listen-to-richmund-and-get-up: 
+	try the action of getting up.
+		
+Before quipping when the current quip is screw-richmund-getting-up-is-for-chumps: 
+		say "[quotation mark]No, I’m good here.[quotation mark]
+
+			[quotation mark]Are you-[quotation mark]
+
+			[quotation mark]Yeah, I’m sure.[quotation mark]
+
+			[quotation mark]But madam, I must insist.[quotation mark]
+
+			[quotation mark]Then carry me.[quotation mark]
+
+			[quotation mark]He begins to motion towards you.[quotation mark]
+
+			[quotation mark]No, not actually. Just let me lie down here, I’m pretty tired.[quotation mark]
+
+			He attempts to smile politely.
+
+			Flipping around so as to not tire out your neck, you decide to begin the conversation.";
+		shift the conversation to the Table of Richmund Conversation.
+
+The greeting of Richmund is richmunds-greeting. 
+
+Section - Bedtime Story
+
+Bedtime Story is a scene. Bedtime Story begins when scene index is 2. Bedtime Story ends when the scene index is 3.
+
+[The printed name of Your Bedroom is "".
+The description of Your Bedroom is "".]
+
+The bedside table is a furniture. The printed name of the bedside table is "small white bedside table". Understand "bedside table", "white bedside table", "small white bedside table", "small white table", "small table", "side table", "bed table", "bedside", or "white small bedside table" as the bedside table. The description of the bedside table is "A small white table that sits besides your bed. On top sits a lovely star-shaped lamp that's just right level of brightness.".
+
+The violet dresser is a furniture. The printed name of the violet dresser is "violet double dresser". Understand "dresser", "violet double dresser", "violet dresser", "double dresser", "double violet dresser", or "plushies" as the violet dresser. The description of the violet dresser is "A large double dresser that's a soft shade of violet. On top sits a giraffe, lion, elephant, panda, and narwhal plushie. Your favorite animals. There's also your most favorite plushie, a flashy red-orange bird that your mother had made for you.".
+
+The wooden desk table is a furniture. The printed name of the wooden desk table is "white wooden desk table". Understand "white wooden desk table", "white wooden table", "wooden table", "desk table", "white wooden table", "wooden desk table", "white desk table", "art table", or "tall table" as the wooden desk table. The description of the wooden desk table is "An elegant-looking white wooden desk table. On top you see some of your colorful, 'abstract' art covered by a plethora of crayons and other art stuffs. You also see a violet desk lamp curved in a random direction, you must have been bored.".
+
+The closet door is a furniture. The printed name of the closet door is "half-open closet door". Understand "closet door", "closet", "half-opened white door", "half-open door", "half open door", "half opened white door", "half-opened door", "half-open closet door", or "half open closet door" as the closet door. The description of the closet door is "You peer in the closet door and see a rather large collection of colorful clothes. You see small dresses and blouses but notice that the jeans and t-shirts are the most worn out.".
+
+The bedroom window is a furniture. The printed name of the bedroom window is "bedroom window". Understand "window", "bedroom window", "bed window", or "window of the bedroom" as the bedroom window. The description of the bedroom window is "You look at the window and gaze at the stars for a short moment. Looking down, you notice that you live in a rather large house with quite a bit of 'lawn' space. You also see some captivating flowers that glisten in the moonlight."
+
+A bed is a kind of supporter. A bed is fixed in place. A bed is always enterable.  Every bed allows seated and reclining. The bed is usually reclining.
+
+The bedroom-bed is a bed. The printed name of the bedroom-bed is "wide-striped white and violet bed". Understand "bed", "wide-striped bed", "wide-striped white and violet bed", "white and violet bed", "violet and white bed", "striped bed", "wide-striped violet and white bed", or "bed of stripes" as the bedroom-bed. The description of the bedroom-bed is "A rather comfy looking bed with large violet and white stripes. You see a single white pillow resting at the head.".
+
+The bedroom-bed, bedside table, violet dresser, wooden desk, closet door, and bedroom window are in Your Bedroom.
+
+Instead of exiting when Ruth is in Your Bedroom:
+	try going backward.
+
+After going to Your Bedroom:
+	terminate the conversation;
+	if Guest of Honor is happening:
+		now the loser message is "Your body freezes stiff from the cold and suddenly the walls begin to collapse around you. You hear faint tempoed beeps echo in the distance. 
+
+			As you shiver in the darkness, the tempo gradually slows until the beeps merge into a single low tone. The memories that you've collected seem to flicker out in the darkness. 
+
+			[quotation mark]Cold.  It’s so cold.[quotation mark]
+
+			The thought echoes as your mind goes blank.";
+		now the scene index is 2;
+		scene-interlude;
+		say "[input style]CHAPTER 3[roman type][line break]";
+		say "[blockquote style]Bedtime Manner[roman type][line break][line break]";
+		say "Not knowing what to expect, you walk in slowly.
+
+		Suddenly, you’re in a room facing the sky, dimly lit by moonlight and a small star shaped lamp.  Perplexed by the difference in lighting, you look behind you only to see Richmund smiling back.";
+	otherwise:
+		try the action of looking;
+		say "My apologies, the next chapter for this room has not yet been written.";
+	try the action of closing the white four panel door ;
+	if Guest of Honor is happening: 
+		say "In front of you, you see a wide-striped white and violet bed accompanied by a small white bedside table where the star-shaped lamp rested atop.
+
+			To your left you saw a white wooden desk table with a matching white chair. The tabletop was littered with crayons, assorted colored papers, and a large sketchbook. To your right you saw a half-opened white door leading to a closet and a violet double dresser beside it. On the dresser rested a variety of animal plushies. Before you can take a closer look around, you hear a woman’s voice, loudly from beyond the door.
+			
+			‘Sweetie, are you in bed yet?’
+
+			‘Sweetie? That’s weird. That’s what you call kids right? Or [italic type]lovers[roman type].’ you thought to yourself.
+
+			 However, you do feel that the ground is quite a bit closer and take a look at your arms and feet. Hm, you were quite a ways smaller. You also notice your dress was gone, replaced with light-green button-down pajamas. They were really comfy.
+
+			‘This seems a bit off’ you think to yourself.
+
+			However, being the ‘act-first think-later kinda [italic type]girl[roman type]’ you were, you decided that it’d probably be best to try responding.";
+		run a conversation on the Table of Ada's In Bed Inquiry;
+	
+Before quipping when the current quip is ada-im-not-in-bed:
+	say "'No [italic type]mommy[roman type]'
+	
+	Before you knew it, you had said it instinctively.
+
+	Your best guess was that parent-child bonds were somehow strong enough to transcend strange magic-butler-induced dimensions.
+
+	'Get to bed dear, I’ll be right up.'
+
+	You wonder if you should get in bed or look around first.";
+	terminate the conversation.
+	
+Instead of sitting on the bedroom-bed when Bedtime Story is happening:
+	try lying on the bedroom-bed;
+	
+After lying on the bedroom-bed:
+	initiate ada's arrival;
+
+Before quipping when the current quip is ada-im-in-bed:
+	say "'Yes [italic type]mommy[roman type]'
+	
+	Before you knew it, you had said it instinctively.
+
+	Your best guess was that parent-child bonds were somehow strong enough to transcend strange magic-butler-induced dimensions.
+
+	'Alright dear, I’m coming right up.'
+
+	Not wanting to be a liar, you dash into the bed.";
+	try lying on the bedroom-bed;
+	
+Table of Quip Texts (continued)
+quip	quiptext  
+ada-im-in-bed	""
+ada-im-not-in-bed	""
+
+Table of Ada's In Bed Inquiry
+prompt	response	enabled
+"Yes, I'm in bed."	ada-im-in-bed	1
+"No, I'm not in bed."	ada-im-not-in-bed	1
+
+To initiate ada's arrival:
+	say "[conditional paragraph break]A short moment after, the door opens slightly and warm light from the hallway floods in as a tall thin figure enters the room. The figure closes the door and in the soft glow of the star-shaped lamp you see a delicate woman with autumn red hair and crisp blue eyes. You tuck your head under the covers.
+
+		‘Hey’ she says softly.
+
+		‘Hey Rue’ she continues.
+
+		‘Rue?’ you think to yourself. ‘Is that my name? That is definitely a strange name.’ as you continue.
+
+		‘Now don’t you hide under there, I know you’re not asleep yet.’ she says as she sits herself on the side of the bed.
+
+		You poke your head out from under covers and happily say ‘surprise!’.
+
+		She laughs and pats your head.
+
+		‘I have a surprise for you too sweetie, something special.’";
+	now Ada is in Your Bedroom;
+	run a conversation on the Table of Ada's Special Inquiry.
+
+Table of Quip Texts (continued)
+quip	quiptext  
+ada-tell-me-what-it-is	""
+ada-i-don't-care	""
+
+Table of Ada's Special Inquiry
+prompt	response	enabled
+"Ask her what it is."	ada-tell-me-what-it-is	1
+"Tell her she says that every night."	ada-i-don't-care	1
+	
+Before quipping when the current quip is ada-tell-me-what-it-is:
+	say "‘What is it, what is it!’ you say eagerly.
+
+		‘Something lovely that I’ll give to you after your bedtime story.’";
+	talk to ada about bedtime story.
+	
+Before quipping when the current quip is ada-i-don't-care:
+	say "‘But you say that every night.’ you respond with an unimpressed expression.
+
+		'Well, a bedtime story is always special Rue. But tonight’s special thing is extra special.'";
+	talk to ada about bedtime story.
+
+To talk to ada about bedtime story:
+	say "[conditional paragraph break]‘Bedtime story?’ you think to yourself. So that’s what’s going on.
+
+		‘What’s the story tonight mommy?’ you say excitedly.
+
+		‘You get to pick!’ she replies with just as much enthusiasm.";
+	run a conversation on the Table of Picking a Bedtime Story.
+	
+Table of Quip Texts (continued)
+quip	quiptext  
+i-want-the-fire-prince	""
+
+Table of Picking a Bedtime Story
+prompt	response	enabled
+"The Fire Prince"	i-want-the-fire-prince	1
+"The Fire Prince"	i-want-the-fire-prince	1
+"The Fire Prince"	i-want-the-fire-prince	1
+"The Fire Prince"	i-want-the-fire-prince	1
+
+Before quipping when the current quip is i-want-the-fire-prince:
+	say "Your eyes shone with anticipation, you say ‘The Fire Prince!’
+
+		She flashes a warm smile. ‘The Fire Prince? You always pick that sweetie.’
+
+		‘Because I’m in it!’ you reply happily.
+
+		‘The lovely princess Rue!’ she replies as she pokes your nose.
+
+		‘Alright dear, tonight we’ll follow the story of the brave fire prince.’
+
+		She closes her eyes, and takes a slow deep breath. 
+
+		Suddenly they open and with great enthusiasm she says:
+
+		‘Once upon a time, in a beautiful land far away. There lived a beautiful princess named Ruth, with auburn hair and emerald eyes.’
+
+		‘Oh, Ruth. Ruth. That’s not so bad.’ you think to yourself, snapping out of the strange child-like feeling that had overcome you. However, the feeling quickly returns as her captivating tone draws you back in.
+
+		'With the king and queen, she lived in a splendid castle atop a hill, overseeing sweet meadows and a peaceful sea.'
+
+		‘All the people of the kingdom had loved her. Not for her enchanting beauty, but rather for her kindness that was so gentle that it had warmed the coldest of hearts.’
+
+		‘However, one day, when the king and queen had left the castle to attend to the kingdom’s troubles the princess was left all alone.‘
+
+		‘Her guards that the king and queen had left to attend to her had forgotten their duties, leaving the castle to enjoy the kingdom’s festivities.’";
+	run a conversation on the Table of Guard Criticism.
+	
+Before quipping when the current quip is story-guard-interrupt:
+	say "Wow, those guards were big meanies!’
+	
+		‘Oh yes Rue, they really were a bad bunch!’
+		
+		‘The king and queen should have paid better attention to people they employed.’ she says as a slight look of melancholy overcomes her.
+
+		She collects herself and returns to telling the story.[paragraph break]";
+	continue bedtime story after guard interruption.
+	
+Before quipping when the current quip is story-guard-dont-interrupt:
+	continue bedtime story after guard interruption.
+
+Table of Quip Texts (continued)
+quip	quiptext  
+story-guard-interrupt	""
+story-guard-dont-interrupt	""
+
+Table of Guard Criticism
+prompt	response	enabled
+"Interrupt."	story-guard-interrupt	1
+"Let her continue."	story-guard-dont-interrupt	1
+
+To continue bedtime story after guard interruption:
+	say "‘Noticing no guards left to protect the castle, a great dragon of fire and rage came forth to take its riches.’
+
+		‘The princess Ruth, however, was not afraid and tried her best to stop the dragon, but to no avail.’
+
+		‘Before she knew it, the entire castle had lit aflame. Bursting with smoke and fire.’";
+	run a conversation on the Table of Gasping.
+		
+Table of Quip Texts (continued)
+quip	quiptext  
+story-gasp	""
+story-dont-gasp	""
+
+Table of Gasping
+prompt	response	enabled
+"Interrupt."	story-gasp	1
+"Let her continue."	story-dont-gasp	1
+
+Before quipping when the current quip is story-gasp:
+	say "You gasp loudly, placing your hands over your mouth.
+	
+		She does the same in response.[paragraph break]";
+	continue bedtime story after gasp interruption.
+	
+Before quipping when the current quip is story-dont-gasp:
+	continue bedtime story after gasp interruption.
+
+To continue bedtime story after gasp interruption:
+	say "However, before the castle was completely engulfed, a brave prince had returned, having come back from his adventures.
+
+		‘Noticing that the princess was nowhere in sight, he braved the burning castle searching for her.’
+
+		‘Finding her trapped under a great fallen column, the prince tried his best to lift the column.’";
+	run a conversation on the Table of Know It All.
+	
+	
+Table of Quip Texts (continued)
+quip	quiptext  
+story-know-it-all	""
+story-dont-know-it-all	""
+
+Table of Know It All
+prompt	response	enabled
+"Interrupt."	story-know-it-all	1
+"Let her continue."	story-dont-know-it-all	1
+
+Before quipping when the current quip is story-know-it-all:
+	say "‘And he lifts it with his great strength and courage!’ you whisper loudly.
+	
+		‘Not this time Rue.’ 
+
+		She grips your hand and smiles. Yet she still looks sad. 
+
+		‘The prince wasn’t quite as strong this night.’
+
+		She continues on, you feel a little distraught.[paragraph break]";
+	continue story after know it all interruption.
+		
+Before quipping when the current quip is story-dont-know-it-all:
+	continue story after know it all interruption.
+
+To continue story after know it all interruption:
+	say "‘But being unable to do so, he crawled under the column with the princess, comforting her with a smile--before using all the strength in his back to lift the great column.’
+
+		‘Moving it just enough for the princess to escape, he beckoned her to go. Hesitant, she eventually listened and slid out from under the column.’
+
+		‘Looking back on the prince who had collapsed under the weight of the column, the princess tries to help, but cannot find the strength to lift the column.’
+
+		‘This doesn’t feel right’ you think to yourself as you try recall what you can of the story. 
+		‘He defeats the dragon by now right? He has to. Everything ends up happily ever after afterall.’
+
+		‘The prince smiles once more, a warm smile filled with kindness and peace. Among the smoke and covered in ashes, the princess tries her best and smiles back.’
+
+		‘He tells her to leave him, that there was no need to worry, since her smile would be more than enough to protect him.’
+		
+		‘She tries to stay, but being pushed back by flames, the princess flees the castle before it collapses.’
+
+		‘Safe outside the castle, the princess cried and cried--knowing that the brave prince that had saved her had been left in the fire.’
+
+		You see her start to tear up a little.";
+	say  "[paragraph break][alert style]Press any key.[roman type][paragraph break]";
+	wait for any key;
+	say "‘But the prince wasn’t truly gone.’
+	
+		'Sealed in a magic necklace, the prince of fire had slept, waiting for the princess to some day wake him.'
+
+		‘The princess found the necklace in the wreckage, it had stayed warm long after rubble had cooled.’
+
+		‘When she wore it, she felt a strange feeling. That the prince's warm smile would find her in times of trouble and cold.'
+		
+		'That he would keep his promise to always protect her.’
+
+		A few tears were falling on the blanket. Some were hers, but most were your own.
+
+		‘Why am I crying?’ you think to yourself. ’I mean, it wasn’t really all that sad.’ as your thoughts continue.
+
+		As you wipe some tears off your face, you notice that she was clutching onto something at her chest during the story. You see a thin silver necklace poke out from her grasp, leading around her neck.
+
+		‘It’s ok, Rue, I’m here for you.’ she whispers as she begins to unclasp the necklace.
+
+		‘Why am I crying mommy?’ you say under your tears and sniffles.
+
+		She wraps the necklace around your neck and her arms around you. 
+
+		‘I’ve got you sweetie. I’ve got you. And I won’t let go.’
+
+		You let out a soft whimper.
+
+		‘Hush now, no more tears sweetie.'
+
+		You hear the garage door rustle from below the house. She pats you a few times and brushes your hair. She holds on to you until she unexpectedly hears the front door slam open. 
+
+		‘Looks like daddy’s home, I’ll go check on him real quick and be right back.’";
+	say  "[paragraph break][alert style]Press any key.[roman type][paragraph break]";
+	wait for any key;
+	say "As she gets up, you notice a small heart-shaped silver locket drop from her gown as it tugs from the necklace. You clutch onto it. 
+
+		Warm. Pleasant and mild.
+
+		You see her open the door and the light floods in again. Along with the light, she disappears as the door closes.
+
+		From beyond the door, you can hear muffled talking:
+
+		‘Robert? Are you there?’
+
+		‘Robert, come now, respond dear.’
+
+		A brief moment passes and you hear the shuffling of feet.
+
+		‘Who the fuck’s Robert?’
+
+		You hear a thundering slam and the walls shake. You want to scream but then you hear a deafening bang.";
+	remove Ada from play;
+	now Ruth wears the locket;
+	now the temperature level of the locket is 3;
+	run a conversation on the Table of Helping Ada.
+
+	
+	[alarms]
+Table of Quip Texts (continued)
+quip	quiptext  
+help-ada	""
+im-an-awful-person	""
+
+Table of Helping Ada
+prompt	response	enabled
+"Go help her."	help-ada	1
+"Stay in the room."	im-an-awful-person	1
+
+Before quipping when the current quip is help-ada:
+	say "You want to help your mother. Even if you might fail, you want to at least try. You hold tightly onto your new locket. It feels even warmer now.";
+	warm the locket;
+	terminate the conversation;
+	silently try going backward.
+	
+Before quipping when the current quip is im-an-awful-person:
+	say "You stay in your room, hiding. It wouldn’t make sense to endanger yourself but this doesn’t seem like something you would do. Your locket suddenly feels colder. 
+	
+	You feel like you should go now.";
+	warm the locket;
+	now Ruth is in a cold situation;
+	terminate the conversation.
+	
+Instead of going to A Special Room when Bedtime Story is happening:
+	if Ruth does not have the locket:
+		say "You can't go just yet. You feel like you'll leave something behind.";
+	otherwise:
+		now Ruth is not in a cold situation;
+		say "You run to open the door, but before you can turn the handle, you hear loud, high pitched sirens echo throughout the house.
+
+			The home alarm had gone off.
+
+			You hear the shuffling get louder, and faster. The door slams close and you hear footsteps on the lawn. You look out your window and see two shadowy figures carrying a large bag each.
+
+			‘God, you didn’t have to shoot her Jerry.’
+			‘Shut up Akler, get your ass in gear.’
+
+			You would never forget those names. 
+
+			As the sirens drown out your bawling, you choke back your tears and dash back to the door, flinging it open.
+
+			‘Mom!’ you yell.
+
+			‘Welcome back madam.’ Richmund greets you with a smile and a bow.";
+		now the scene index is 3;
+		move Ruth to A Special Room, without printing a room description.
+	
+Section - Tea Time One
+
+Tea Time One is a scene. Tea Time One begins when the scene index is 3. Tea Time One ends when the scene index is 4.
+
+Tea time one interaction level is a number that varies. Tea time one interaction level is 0. 
+
+After quipping when Tea Time One is happening and there is a prompt corresponding to the response of the current quip in Table of Richmund Conversation:
+	if the enabled corresponding to the response of the current quip in the Table of Richmund Conversation is 0:	
+		Increase the tea time one interaction level by 1.
+
+When Tea Time One Begins:
+	scene-interlude;
+	say "[input style]CHAPTER ?[roman type][line break]";
+	say "[blockquote style]Tea Time[roman type][line break][line break]";
+	say "You wipe your tears and try your best to collect yourself. You were back in the white room. The sudden shift in brightness irritates your puffy eyes.
+
+		‘Screw you Richmund’
+
+		‘Sorry, madam. Would you like a hug?'
+
+		‘A hug? That’s weird.’ 
+
+		You pause briefly to sniffle.
+		
+		‘Why would I hug you?’
+		
+		You pause again to sniffle.
+
+		‘But ok. I wanna hug.’ you say as you shuffle towards him.
+
+		Getting closer, you notice something moving in the mirror. 
+
+		It was you. 
+
+		You could see your reflection now. However, there was no more dress and you weren’t quite as tall as you remember. 
+
+		You were still a kid. 
+
+		‘Well, why not.’ you say to your reflection.
+
+		You decide to hold off on the hug for now.
+
+		Richmund watches as you walk past him, you making faces in the mirror.
+
+		‘Wow, I really was a cute kid, Rich’
+
+		‘Yes madam, adorable.’";
+	enable the richmund-ada-chapter quip in the Table of Richmund Conversation;
+	enable the richmund-new-doors quip in the Table of Richmund Conversation;
+	enable the richmund-hug-me quip in the Table of Richmund Conversation;
+	enable the richmund-whats-this-locket quip in the Table of Richmund Conversation;
+	enable the richmund-im-cute quip in the Table of Richmund Conversation;
+	now the description of the wall-mirror is "You see a child with auburn hair and bright green eyes in the reflection. You make some more faces.".
+
+	
+Instead of looking when Ruth is not aware of new doors and Tea Time One is happening:
+	now the windowed door is revealed;
+	now the apartment door is revealed;
+	now the apartment door is not scenery;
+	now the windowed door is not scenery;
+	say "Looking at the room again, something was obviously different.
+	
+		There were new doors, now on the left and right walls. 
+		
+		'Guess he was busy while I was gone.' you thought to yourself.
+		
+		The one on the left was a windowed door with metal panels, you can see a sign hanging behind the window but it was too fogged up to read. On the right, there was a plain panel-less door in a dusty, dirty white. On it you see old, metal numbers hinged on, [']218['], and what appears to be the viewing end of a spyhole. 
+		
+		You worry about having to open more doors; the last one was emotionally straining to say the least. But you honestly don't see any other way out. Not to mention the whole memories-and-not-having-them thing.";
+	now Ruth is aware of new doors.
+	
+
+Instead of going to Your Bedroom when Ruth is not aware of new doors and Tea Time One is happening:
+	say "You're still a bit shaken up. Maybe you should take a break before heading back in.".
+
+Before talking to Richmund when Ruth is not aware of new doors and Tea Time One is happening:
+	say "As you stop making faces to talk to Richmund, you notice you weren't the only new thing in the mirror."; 
+	try the action of looking;
+	say "You turn to Richmund and decide to begin the conversation.";
+
+
+Table of Quip Texts (continued)
+quip	quiptext  
+richmund-ada-chapter	""
+richmund-new-doors	""
+richmund-hug-me	""
+richmund-whats-this-locket	""
+richmund-socks-please	""
+richmund-im-cute	""
+
+
+Table of Richmund Conversation (continued)
+prompt	response	enabled
+"Ask him about the 'memory'."	richmund-ada-chapter	0
+"Ask him about the new doors."	richmund-new-doors	0
+"Ask him for a hug."	richmund-hug-me	0
+"Ask him about the locket."	richmund-whats-this-locket	0
+"Ask him for some socks."	richmund-socks-please	0
+"Tell him you're cute."	richmund-im-cute	0
+
+
+After quipping when the tea time one interaction level is 2:
+	enable the richmund-socks-please quip in the Table of Richmund Conversation.
+	
+Before quipping when the current quip is richmund-ada-chapter:
+	say "‘Hey, what’s with the strange trip down forgotten-memory lane?’
+
+		‘Hm?’ he says before pausing a short moment.
+
+		‘I’m afraid I don’t quite understand the question.’ 
+
+		‘I mean the door, Rich. The door took me to my bedroom. At least I think it was my bedroom. I saw my mom, I found out my name, I’m a little kid now, and I got this weird, well, actually really pretty locket. That’s what I-’
+
+		‘My apologies, madam. I had not been informed of what was behind the doors. Only to prepare them for you while I was under your service. I am sorry if it caused you any distress.’
+
+		‘So you really don’t know anything about anything do you?’
+
+		‘Regretfully so, madam.’
+
+		You tilt your head to the side and sigh. 
+		
+		‘Ok, I guess.’".
+	
+Before quipping when the current quip is richmund-new-doors:
+	say "‘I see you snapped in a couple more doors.’
+
+		‘Yes madam, I had the pleasure of doing some redecorating.’
+
+		‘Er-yeah, [‘]redecorating[‘].’ you think to yourself.
+
+		‘So, should I take a look inside?’
+
+		‘I would not advise against it, madam. The last one seems to have left you with a rather lovely gift.’ he says, glancing at the locket.
+
+		‘Yeah, that’s true.’ you say looking down while fiddling with your locket. You notice it’s still unusually warm.
+
+		‘I imagine it will also help you get ready for your appointment.’
+
+		‘Oh right, the appointment. When was that again?’
+
+		‘When you feel that you're ready madam.’
+
+		‘Oh. Well. I’m ready now, let's go.’
+
+		‘I don’t think you’re quite ready madam.’
+
+		‘Why is that?’
+
+		‘Well, going as a child in sleepwear might be a bit rude to the other guests.’
+
+		‘Oh, right, that would be--wait, who gives a, uh, poop about that Rich? Look at the situation we’re in. This is weird. Everything is weird. I’m a little girl with a grown man in a strange white room.’ 
+
+		‘Please calm down, madam.’
+
+		‘I am calm. I am so calm. You calm down.’
+
+		He smiles and pats you on the head.
+
+		‘As you wish, madam.’
+
+		You slide your head from under his hand and glare. His hand had smelled like lavender.".
+		
+Before quipping when the current quip is richmund-hug-me:
+	say "Still feeling a bit shaken up, you wipe your eyes on your sleeves.
+
+		‘Hey, I’ll take that hug now.’
+
+		‘Of course, madam.’ he says as he opens for a hug. He smiles kindly.
+
+		You take two steps towards his arms and he wraps them gently around you.
+
+		‘Thanks Richmund.’
+
+		‘My pleasure, madam.’
+
+		As you cozy your head on his stomach, you notice he’s warm and smells faintly of lavender.
+
+		‘If it would be appropriate for me to ask, madam, what exactly had troubled you?’
+
+		‘I don’t really want to talk about it Richmund.’
+
+		‘Understood, madam.’
+
+		You stay in his arms for a few moments longer before moving back.".
+		
+Before quipping when the current quip is richmund-whats-this-locket:
+	say "‘What do you think about this locket Rich?’
+
+		‘It’s a very beautiful piece, madam.’
+
+		‘Yeah, don’t you think. It’s like a cute, little, heart-shaped treasure box. I wonder where the key is.’ you say, polishing it with your pajama collar.
+
+		‘I’m afraid I wouldn’t know.’
+
+		‘Oh sorry, I was thinking aloud. By the way, the locket seems to stay warm on its own. Isn’t that a little weird?’
+
+		‘Indeed, that is unusual, madam.’
+
+		‘Still, it’s a good warmth.’ 
+
+		‘Then it is most becoming of you. I should hope that its warmth will never leave you, madam.’
+
+		‘Wow, what an odd thing to say Richmund. But for some reason, I really don’t think it will.’".
+		
+Before quipping when the current quip is richmund-socks-please:
+	say "You wiggle your toes, noticing that you weren’t wearing any socks.
+
+		‘Hey Richmund, I need some socks.’
+
+		‘Certainly, madam.’ 
+
+		You see him pull out and put back in a few child-sized socks from the tea cart until he finds one that matches your light-green pajamas.
+
+		He lowers himself to pull them on your feet.
+
+		‘Uh, why do you have those?’
+
+		‘For you to wear, madam.’
+
+		‘But, like, why? Did you know I was going to un-age?’
+
+		‘No, madam.’
+
+		‘Then why do you have several pairs of children’s socks?’
+
+		‘I’ve come prepared for anything madam.’
+		
+		You pause, not knowing what to think.
+
+		‘Let me look under your cart.’
+
+		‘I can’t let y-’
+
+		Given your small size, you dash under him, wanting to lift the white cloth hiding the sides of the cart. He catches you by the waist before you get the chance.
+
+		‘I really can’t let you do that madam.’
+
+		‘And why is that?’ you respond in disappointment.
+
+		‘For your own safety.’
+
+		‘What? What’s in there? You've made me super curious Rich. Take responsibility.’
+
+		‘Please try to restrain yourself, madam. For your own good.’
+
+		‘Fine.’ you say as he pulls on the socks.
+
+		You pout. He slips on a matching pair of striped slippers that he also pulls from the cart.".
+		
+Before quipping when the current quip is richmund-im-cute:
+	say "Hey you, I’m cute.’
+
+		‘Yes, very much so, madam.’
+
+		‘React more than! Don’t you want to [italic type]do things[roman type] to cute kids?’
+
+		‘I am least a gentleman, madam.’
+
+		You feel like you could have phrased better.".
+
+When Tea Time One ends:
+	disable the richmund-hug-me quip in the Table of Richmund Conversation;
+	disable the richmund-socks-please quip in the Table of Richmund Conversation;
+	disable the richmund-im-cute quip in the Table of Richmund Conversation;
+	disable the richmund-new-doors quip in the Table of Richmund Conversation;
+	
+Instead of talking to Ruth:
+	say "'What kind of crazy person talks to herself.' you mutter quietly under your breath.".
+	
+Section - Drops of Sunshine
+
+Drops of Sunshine is a scene. Drops of Sunshine begins when Ruth is not done with chapter 4 and Ruth is in Sarah's apartment. Drops of Sunshine ends when Ruth is in A Special Room.
+
+Before going to Sarah's Apartment when Ruth is not done with chapter 4 and the apartment door is revealed and the qbc_litany is not the Table of No Conversation:
+	say "You walk towards the old number-marked door, wondering what was in store for you next. Upon squeezing the handle, the door swings inwards and you're pulled right in."
+	
+After going to Sarah's Apartment when Ruth is not done with chapter 4:
+	scene-interlude;
+	say "[input style]CHAPTER 4[roman type][line break]";
+	say "[blockquote style]Drops of Sunshine[roman type][line break][line break]";
+	say "Tugging at your hand, you see a young girl with light strawberry-blonde hair leading you through a very short hall. As you kick the door behind you to close it, you instinctively sling off your shoes, watching one land on the door mat behind you and the other to the side of the hall.  
+
+		Embarrassed about your shoe flinging accuracy, you turn back around. You notice she had let go of your hand.
+
+		Sunlight. It was shining through a large sliding at the end of the room, colored at the edges from soft blue curtains. 
+
+		There she stood with her chest pushed out, stretching her arms above her and head and smiling bright as the sun behind her. 
+
+		‘What took you so long?’ she says spritely.
+
+		‘I, uh, er-’
+
+		'Oh come on Ruth, I know practice didn’t take that long.'
+
+		‘Yeah, I, uh, had to pick something up’ you say back, trying to smile. 
+
+		She notices your shoulder bag is a lot lumpier than usual and her eyes light up.
+
+		‘Oh, something?’ she says enthusiastically.
+
+		She begins to tickle at your sides.";
+	say  "[alert style]Press any key.[roman type][paragraph break]";
+	wait for any key;
+	say "‘I wonder what is it--tickle, tickle tickle. Won’t you show me?’ she continues.
+
+		‘Aw, alright’ you say, dropping your bag while smiling silly from the sensation.
+
+		‘Hurray!’ she says as you pull the bag back up, opening it up to reveal what’s inside.
+
+		Besides what appears to be a few notebooks and pencils, you see a shopping bag filled with snacks and candy.
+
+		She smiles even more while pulling you in for a hug.
+
+		‘Even though I’m the host this time--you think of everything Ruth!’ she says excitedly.
+
+		She quickly unwraps a pair of candies, popping one in her mouth and pushing the other in yours. 
+
+		‘Oh this is great! What flavor is this?’ she says.
+
+		‘Summer Strawberry’ you reply, reading the box in your bag. It was pretty good.
+
+		She flips on the TV and tosses you a pair of white slippers. You catch them perfectly and she pumps her fist with a smile in response. 
+		
+		‘Well, tell me when you’re ready. You need to use the restroom right? You always do when you come over.'
+		
+		'Er, right, you know me' you try to say enthusiastically.
+		
+		Slipping on the slippers, you shuffle off to put your shoes neatly by the mat as you wonder to yourself what exactly is happening.";
+	now Ruth is not aware of Sarah's apartment;
+	now night time counter is 0;
+	
+Understand "ready" as talking to when Drops of Sunshine is happening.
+		
+Night time counter is a number that varies.
+
+Table of Quip Texts (continued)
+quip	quiptext  
+sarah-yes	""
+sarah-no	""
+
+Table of Sarah YesNo
+prompt	response	enabled
+"Yes"	sarah-yes	1
+"No"	sarah-no	1
+
+Instead of going backward when Drops of Sunshine is happening:
+	say "Are you sure you want to leave this room before completing it?
+	
+		If you do, you'll lose all progress in this room.";
+	run a conversation on the Table of Sarah YesNo;
+		
+Before quipping when the current quip is sarah-yes and Drops of Sunshine is happening:
+	terminate the conversation;
+	enable the sarah-yes quip;
+	move Ruth to A Special Room, without printing a room description;
+	say "You open the door and go in.";
+	scene-interlude;
+	say "[input style]CHAPTER ?[roman type][line break]";
+	say "[blockquote style]Tea Time[roman type][line break][line break]";
+	say "'Welcome back madam.'
+	
+		'Hey Richmund. 
+		
+		'How was the room?'
+		
+		'Fuzzy? I can't seem to remember anything from it Rich.'
+		
+		'I'm sorry to hear that madam.'".
+	
+Before quipping when the current quip is sarah-no and Drops of Sunshine is happening:
+	enable the sarah-no quip;
+	terminate the conversation.
+
+Instead of examining when Drops of Sunshine is happening and the qbc_litany is not the Table of No Conversation:
+	say "You feel that it might be rude to go off and look at something when she's talking to you.".
+
+Your shoulder bag is a thing. The printed name of your shoulder bag is "your shoulder bag". Understand "bag", "pack", "shoulder bag", "sack", "backpack", "carryall", and "hangbag" as your shoulder bag. The description of your shoulder bag is "Resting against a wall, you see the shoulder bag that you had brought. It's a brown, cloth bag with pockets at the sides, two large buttons that appear to decorative, and a single flap connected by a short belt .
+
+	Wondering if you had brought anything else useful, you walk over to take a closer look inside. Inside, you see a few things, what do you want to look at?".
+
+Instead of taking your shoulder bag:
+	say "'Oh, did you have to go somewhere?'
+		
+		'No, not really.'
+		
+		You decide not to take the bag.".
+		
+After examining your shoulder bag:
+	run a conversation on the Table of Shoulder Bag.
+	
+Table of Quip Texts (continued)
+quip	quiptext  
+bag-yellow-notebook	""
+bag-close	""
+
+Table of Shoulder Bag
+prompt	response	enabled
+"A yellow notebook."	bag-yellow-notebook	1
+"Close the bag."	bag-close	1
+
+Before quipping when the current quip is bag-yellow-notebook:
+	say "A binded yellow notebook with various stickers along the inside of the cover. You notice a slip pointing out from the notebook. You open up to the page and read:
+	
+	'Stuff to Remember for Sarah #48: Indirection Members 
+	
+	1. Stefan - long blond, windswept hair and a long nose.[line break]
+	2. Ricky - short black hair, weird looking thumbs.[line break]
+	3. Braden - short dirty blond hair, lower arm tattoo, always look like he's squinting at the sun.[line break]
+	4. Jahan - medium-length brown hair slicked back, has a bit of stubble.[line break]
+	5. Ryder - short, mopped brown hair, soft blue eyes.'";
+	enable the bag-yellow-notebook quip;
+	
+Before quipping when the current quip is bag-close:
+	say "You close the bag for now.";
+	enable the bag-close quip;
+	terminate the conversation;
+	
+The refrigerator is a furniture.  Understand "refrigerator", "fridge", "cooler", and "cold white box thing" as the refrigerator. The description of the refrigerator is "You see a plain white top mount refrigerator and walk over to look inside.
+
+	'Oh, you hungry Ruru?'
+	
+	'Uh, not really.'
+	
+	'Ok, well, feel free to help yourself.' she says happily.
+	
+	Inside, you don't see too much, just some milk, eggs, fruits, vegetables, a wrapped plate of jello, and what looks like leftover spaghetti in tuppleware. Closing the door, you see -stuff goes here-."
+	
+The coffee table is a furniture. Understand "table", "coffee table", "small table", or "sarah's table" as the coffee table. The description of the coffee table is "A simple, wooden coffee table that seems to be made of composite wood. Though it doesn't look special in any way, it has a nice light color and is very clean. On it, you see snacks, some of which you had brought.".
+
+The sliding window is a furniture. Understand "window", "sliding window", "curtains", "blinds", and "outside" as the the sliding window. The description of the sliding window is "You go to take a look outside the sliding window, but you first notice a soft reflection instead. You take a closer look at yourself. It looks like you're around the same the age as her. You're wearing a grey open-knit sweater over a mint green, button collar shirt and a pair of black mid-rise skinny jeans.
+
+	Focusing back outside, you see the sun shine colorfully over the folliage, streets, and various buildings of what appears to be a small city.  Judging by the color, it's going to set soon.".
+	
+After examining the sliding window:
+	now the description of the sliding window is "A large sliding window that leads to a small balconey outside where you can see a few potted flowers.".
+	
+The floor lamp is a furniture. Understand "floor lamp", "lamp", "light", or "floor light" as the floor lamp. The description of the floor lamp is "A tall floor lamp with a metal neck and a white bowl for a head.".
+
+The broom closet is a furniture. Understand "louvered door", "white louvered door", "broom closet", "closet", or "closet door" as the broom closet. The description of the broom closet is  "You walk over to the louvered door sitting along the front door-hall and open it. You see a vacuum cleaner, a broom, a map, a toolkit, and a first aid kit. 
+
+	'Did you need something Ruth?'
+	
+	'Oh, I was just thinking about doing some cleaning.'
+	
+	'Don't worry, I just cleaned yester--wait, are you saying it looks dirty?'
+	
+	'No, I meant clean myself.'
+	
+	'Uhh, with, like, a mop?'
+	
+	'Yes.'
+	
+	'Ok.'
+	
+	You close the door to the broom closet.". The printed name of the broom closet is "white louvered door".
+	
+After examining the broom closet:
+	say "You don't need to embarass yourself again.".
+	
+Instead of taking the broom closet:
+	try the action of examining the broom closet.
+	
+The bathroom is a furniture. The printed name of the bathroom is "white calendared door". Understand "white calendar door", "white calendared door", "calendared door", "bathroom door", "bathroom", "calendar-mounted door", "white door", or "calendar door" as the bathroom. The description of the bathroom is "You walk over to other white door, opposite of the louvered door. On it you see a hanging calendar, the top page being kittens and balls of yarn in a basket and the bottom indicating that it's May. You peer inside, it was the bathroom. You flip on the lights and go in despite not actually having to go. Putting the cover down, you sit down on the toilet anyways. You hear your phone buzz.
+
+	Surprised, you take it out of your pocket, you had a couple unread texts. 
+
+	'Let me know when you get to Sarah's place, honey.'
+
+	'You at Sarah's yet princess? '
+
+	'Are you ok Ruth?'
+
+	They were from someone you had labeled 'Dad'.
+	
+	You respond 'Yeah, I'm h-.'
+	
+	Your phone runs out of battery and dies.
+	
+	'Hm, I guess I was pretty irresponsible when I was younger' you think to yourself.
+	
+	You flush the toilet and wash your hands. You feel a bit more comfortable knowing where you are now. Well, kind of.
+	
+	You close the door behind you and turn off the bathroom lights.
+	
+	'Hey Sarah, can you let my dad know I'm here? My phone died.'
+	
+	'Sure thing girl, I got you.'";
+	
+Instead of taking the bathroom:
+	try the action of examining the bathroom.
+	
+After examining the bathroom:
+	warm the locket;
+	disable the sarah-wheres-the-bathroom quip in the Table of Sarah Readiness;
+	say "Your locket suddenly feels a bit warmer.";
+	now the description of the bathroom is "You don't really need to use the bathroom right now. But you go in and wash your hands before leaving.";
+	now the printed name of Sarah is "Sarah".
+	
+The bedroom door is a furniture. The printed name of the bedroom door is "white flush door". Understand "white flush door", "flush door", "bedroom door", "bedroom", or "simple door" as the bedroom door. The description of the  bedroom door is "You walk over to the white flush door and look inside. It's dark but you can make out what appears to be a queen-sized bed and a white dresser.
+
+	'No need to go in the bedroom Ruru.'
+	
+	'We'll be sleeping out here like usual.'
+	
+	Before closing the door, you notice a framed picture on the dresser of a man in a chef's hat. You also see a poster for the music group, 'Indirection'. Among the four pictured stars in the poster, you see a large heart-shaped sticker placed next to the guy with a lower arm tattoo.
+	
+	'Oh, uh, of course.'".
+	
+Instead of taking the bedroom door:
+	try the action of examining the bedroom door;
+	
+The futon couch is a couch. The printed name of the futon couch is "dark blue couch". The description of the futon couch is "A plain, dark blue couch with quite a few pillows on it. It looks somewhat like a folded mattress. 
+
+	'Staring at the couch again?'
+
+	'Again?'
+
+	'Yeah, you always seem to be so amazed by the futon couch.'
+
+	'Oh, so that's what it is.' you think to yourself.
+
+	'It just looks so comfy.'
+
+	'Then hop on' she says as she pats the spot beside her.". 
+	
+After examining the futon couch:
+	now the printed name of the futon couch is "dark blue futon couch";
+	now the description of the futon couch is "A dark blue couch with the power to 'transform' into a medium sized bed. ".
+
+Understand "couch", "blue couch", "dark blue couch", "futon couch", "couchie", "sofa", "dark blue sofa", "blue sofa", "dark blue futon couch", or "dark blue futon sofa", or "futon sofa" as the futon couch.
+
+When Drops of Sunshine begins:
+	enable the sarah-wheres-the-bathroom quip in the Table of Sarah Readiness;
+	enable the sarah-hi quip in the Table of Sarah Readiness;
+	enable the sarah-im-ready quip in the Table of Sarah Readiness;
+	now your shoulder bag is in Sarah's Apartment;
+	now the refrigerator is in Sarah's Apartment;
+	now the coffee table is in Sarah's Apartment;
+	now the sliding window is in Sarah's Apartment;
+	now the floor lamp is in Sarah's Apartment;
+	now the broom closet is in Sarah's Apartment;
+	now the bathroom is in Sarah's Apartment;
+	[add tv]
+	now the  bedroom door is in Sarah's Apartment;
+	now the printed name of Sarah is "her";
+	now talked to Sarah once is false;
+	now Sarah is in Sarah's Apartment;
+	now the description of Sarah is "A young girl, likely in her early teens with light strawberry blonde hair that runs just past her neck. She's wearing short black socks, tauped cuffed, cotton shorts and a short sleeved mum-colored shirt with a cartoon bunny on it. 
+	
+		'Hey, why are you staring at me Ruth?'
+		
+		'Uh, no reason.'
+		
+		You turn away and wonder if examining people is rude.";
+	
+Instead of looking when Ruth is in Sarah's Apartment and Ruth is not aware of Sarah's apartment:
+	say "You look around, noticing you're in another small room. The walls here are a lively, pale yellow and you notice an old hardwood floor beneath you.  In front of you, you see a large sliding window taking up most of the wall. It's slightly covered by vertical blinds and simple light blue curtains that have been pulled back. You also see a TV, a dark blue couch, your shoulder bag, a coffee table, a floor lamp, a louvered door, a calendar-mounted door, and a white flushed door here. Oh, and you also see [the printed name of Sarah].
+	
+	As you look further to your left, you notice the room opens up into a small, white-tiled kitchen where you see a refrigerator, a stove, and other kitchen necessities. 
+	
+	Your mind connects the dots and you realize you're in a small apartment. You feel looking around even more might be a good idea.";
+	now Ruth is aware of Sarah's apartment.
+	
+Talked to Sarah once is a truth state that varies. 
+
+Instead of talking to Sarah when talked to Sarah once is false:
+	say "'Hey girl, you ready!?' she says with an excited grin.";
+	run a conversation on the Table of Sarah Readiness;
+
+Table of Quip Texts (continued)
+quip	quiptext  
+sarah-wheres-the-bathroom	""
+sarah-hi	""
+sarah-im-ready	""
+sarah-not-ready	""
+
+Table of Sarah Readiness
+prompt	response	enabled
+"Ask her where's the bathroom."	sarah-wheres-the-bathroom	1
+"Greet her."	sarah-hi	1
+"Yes, I'm ready."	sarah-im-ready	1
+"No, not yet."	sarah-not-ready	1
+	
+Before quipping when the current quip is sarah-wheres-the-bathroom:
+	say "‘Almost, where was the bathroom again?’
+
+		‘Seriously? You come here all the time, this is like a second home for you.’
+
+		‘But-’
+
+		‘There’s only so many doors here, take a guess, I guess?’ as she tries to say politely.
+
+		You can tell she feels a bit irritated.
+
+		Your locket feels a little cooler as you feel this could have been avoided if you looked around first.";
+	cool the locket.
+	
+Before quipping when the current quip is sarah-hi:
+	if the printed name of Sarah is "Sarah":
+		say "‘Hey Sarah!’ 
+
+			‘What’s up bestie!’
+
+			‘Hugs?’
+
+			‘Hugs!’
+
+			You hug.
+
+			Your locket feels a little warmer for some reason.";
+		warm the locket;
+	otherwise:
+		say "Hey, um, er, you! What’s up!’ you say awkwardly as you realize you don’t know her name.
+
+			‘You ok Ruth? Don’t tell me you forgot my name now’ she says jokingly.
+
+			‘No, of course not, um-’
+
+			Out of the corner of your eye, you notice a name written on a cup on the coffee table
+
+			‘Sarah?’ 
+
+			‘Yeah?’ she replies, visibly irritated.
+
+			Your locket feels a little cooler as you feel this could have been avoided if you looked around first.";
+		now the printed name of Sarah is "Sarah";
+		cool the locket.
+
+Before quipping when the current quip is sarah-not-ready:
+	enable the sarah-not-ready quip in the Table of Sarah Readiness;
+	say "'No, sorry! you say anxiously.
+	
+		No, it's ok!  she says just as anxiously.";
+	terminate the conversation.
+	
+Before quipping when the current quip is sarah-im-ready:
+	now talked to Sarah once is true;
+	if the printed name of Sarah is "Sarah":
+		say "‘Yep, I think so?’
+
+			‘At least sound a bit more enthused?’
+
+			‘Anyways--'
+			
+			She looks at the sun, noticing that it’ll set soon.
+			
+			'It’s a bit early but let Sarah’s super funtastic sleepover party begin!'";
+	otherwise:
+		say "‘Yep! I’m extra ready!’
+
+			‘Yay!' 
+
+			She looks at the sun, noticing that it’ll set soon.
+			
+			'Well, it’s a bit early but let Sarah’s super funtastic sleepover party begin!'";
+	say "She tosses you a party popper that she hid in her pocket. She pulls the string on hers and you pull yours a short moment after.
+
+		‘Woo!’ she yells.
+
+		You do the same as confetti spills over the coffee table.";
+	now the printed name of Sarah is "Sarah";
+	run a conversation on the Table of Sarah Conversation;
+
+	
+Table of Quip Texts (continued)
+quip	quiptext  
+sarah-greeting	""
+sarah-music	""
+sarah-books	""
+sarah-shows	""
+sarah-boys	""
+sarah-friends	""
+sarah-clothes	""
+sarah-sports	""
+sarah-summer	""
+sarah-movie	""
+sarah-movie-again	""
+sarah-make-something	""
+sarah-eat-someting	""
+sarah-break	""
+
+The litany of Sarah is the Table of Sarah Conversation. The greeting of Sarah is sarah-greeting.
+
+Table of Sarah Conversation
+prompt	response	enabled
+"Let's talk about music."	sarah-music	1
+"Let's talk about books."	sarah-books	1
+"Let's talk about shows."	sarah-shows	1		
+"Let's talk about boys."	sarah-boys	1
+"Let's talk about friends."	sarah-friends	1
+"Let's talk about clothes."	sarah-clothes	1
+"Let's talk about sports."	sarah-sports	1
+"Let's talk about summer."	sarah-summer	1
+"Let's watch a movie."	sarah-movie	1
+"Let's watch another movie."	sarah-movie-again	0
+"Let's make something."	sarah-make-something	1
+"Let's eat something."	sarah-eat-someting	1
+"Take a short break."	sarah-break	1
+
+Before quipping when the current quip is sarah-greeting:
+	say "You cozy yourself next to Sarah.
+	
+		'Back for more?'
+		
+		'Yep! Just needed a short break.'";
+
+
+Before quipping when the current quip is sarah-music:
+	say "‘Hey, what’s your favorite band?’
+
+		She gets up and walks towards the small stereo below the TV. 
+		
+		You figure you should guess before she turns it on.";
+	run a conversation on the Table of Sarah Music;
+	
+
+Table of Quip Texts (continued)
+quip	quiptext  
+sarah-indirection	""
+sarah-heart-shot	""
+
+Table of Sarah Music
+prompt	response	enabled
+"Indirection"	sarah-indirection	1
+"Heart Shot"	sarah-heart-shot	1
+
+Before quipping when the current quip is sarah-heart-shot: 
+	say "You suddenly recall your favorite boy-band.
+
+		 ‘Heart Shot! I especially liked their new single ‘Deer in Headlights.’ you say enthusiastically.
+
+		She pauses at the stereo, looking a little disappointed.
+
+		‘Really? You never told me you were a Heart-Supporter. Let me see if I can find a CD around here.’ she says politely.
+
+		You feel like you might have made the wrong choice.
+
+		‘Oh, got it!’ she says and runs back to pop the CD in.";
+	enable the sarah-heart-shot quip;
+	dance for a while;
+
+Before quipping when the current quip is sarah-indirection:
+	say "‘Indirection!’
+
+		‘You know it!’
+
+		She pushes the button and starts dancing. You try your best to keep up. As you dance, you notice your locket feels a little warmer.
+
+		‘So who’s your favorite Indirection boy?’
+
+		‘Ryder!’, the name suddenly pops into your head.
+		
+		'Oo! Can you guess mine?' she asks excitedly.";
+	warm the locket;
+	enable the sarah-indirection quip;
+	run a conversation on the Table of Sarah Indirection Member;
+		
+Table of Quip Texts (continued)
+quip	quiptext  
+sarah-member-not1	""
+sarah-member-not2	""
+sarah-member-not3	""
+sarah-member-not4	""
+sarah-member-hot	""
+
+Table of Sarah Indirection Member
+prompt	response	enabled
+"Stefan"	sarah-member-not2	1
+"Ricky"	sarah-member-not4	1
+"Braden"	sarah-member-hot	1
+"Jahan"	sarah-member-not3	1
+"Ryder"	sarah-member-not1	1
+
+Before quipping when the current quip is sarah-member-not1:
+	say "'Is it Ryder?'
+	
+		'He's a close second, but I would have to say Braden.'
+		
+		For some reason, you feel like you should have known.";
+	dance for a while;
+		
+Before quipping when the current quip is sarah-member-not2:
+	say "'Is it Stefan?'
+	
+		'Maybe third or fourth most? Braden's my #1.'
+		
+		For some reason, you feel like you should have known.";
+	dance for a while;
+	
+Before quipping when the current quip is sarah-member-not3:
+	say "'Is it Jahan?'
+	
+		'Maybe fourth or third most? Braden's my #1.'
+		
+		For some reason, you feel like you should have known.";
+	dance for a while;
+		
+Before quipping when the current quip is sarah-member-not4:
+	say "'Is it Ricky?'
+	
+		'Ick. They should kick him out. Braden's my #1.'
+		
+		For some reason, you feel like you should have known.";
+	dance for a while;
+		
+Before quipping when the current quip is sarah-member-hot:
+	say "‘No need to guess! I know you’re [italic type]totally[roman type] into Braden.’
+
+		She laughs and tickles your shoulders.
+
+		‘You know me best Ruru!’
+		
+		You smile, noticing a little warmth from your locket.";
+	warm the locket;
+	dance for a while.
+	
+
+To dance for a while:
+	say "[conditional paragraph break]You two dance for a while, playing all your favorite music and laughing about some of the latest music gossip.
+
+	[alert style]- Some time passes as it gets later into the night. -[roman type]
+	
+	This is the temporary end of this chapter. I apologize that it has not yet been completed.
+	
+	Feel free to look around the room.";	
+	increase night time counter by 1;
+	run a conversation on the Table of Sarah Conversation;
+	
+		
+Before quipping when the current quip is sarah-break:
+	say "'Hey Sarah, I need just a moment.'
+	
+		'No probs, do ya thing Ruru!'[paragraph break] ";
+	enable the sarah-break quip;
+	terminate the conversation;
+	
+
+Section - Dine In
+
+Dine In is a scene. Dine In begins when Ruth is not done with chapter 5 and Ruth is in It's a Small World. Dine In ends when Ruth is in A Special Room.
+
+Before going to It's a Small World when Ruth is not done with chapter 5 and the windowed door is revealed and the qbc_litany is not the Table of No Conversation:
+	say "You walk towards door."
+	
+Instead of exiting when Ruth is in It's a Small World:
+	try going backward.
+	
+After going to It's a Small World when Ruth is not done with chapter 5:
+	scene-interlude;
+	say "[input style]CHAPTER 5[roman type][line break]";
+	say "[blockquote style]Dine In[roman type][line break][line break]";
+	say "Suddenly you were in a room filled soft light, light chatter, and dozens of tables.
+	
+	'Now, where did you wander off to, poppet?'
+	
+	You see a man with gray-streaked hair grab onto your hand.
+	
+	'Now, let's get seated dear.'
+	
+	(Not yet written. Sorry) 
+	
+	This chapter introduces Cooper Marino, a major character, Robert Bailey, your father, Philip Marino, the restaurant owner, and Wendy Marino, his wife.
+	
+	Feel free to explore other rooms if you haven't already.";
+	
+
+Chapter - Miscellaneous End Components
+
+Table of Richmund Conversation (continued)
+prompt	response	enabled
+"End the conversation for now."	end-conversation-with-richmund	1
